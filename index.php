@@ -1,5 +1,5 @@
 <?php 
 
-echo "Page d''accueil projet S3";
+echo "Page d\'accueil projet S3";
 
  ?>
