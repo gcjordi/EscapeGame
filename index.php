@@ -1,5 +1,6 @@
 <?php
 	require_once 'Model/Model.php';
+	echo 'connexion établie';
 ?>
 
 
