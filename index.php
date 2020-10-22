@@ -1,3 +1,9 @@
+<?php
+	require_once 'Model/Model.php';
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
