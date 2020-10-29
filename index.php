@@ -33,7 +33,8 @@
 					       <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
 					     </li>
 					     <li class="nav-item active">
-					       <a class="nav-link" href="./jeu.php">Jeu <span class="sr-only"></span></a>
+					       <a class="nav-link" href="./Controller/scene.php
+">Jeu <span class="sr-only"></span></a>
 					     </li>
 					   </ul>
 					 </div>
@@ -76,6 +77,10 @@ Page deux
 <footer>
       
 </footer>
+
+<?php
+    require 'js/scene.php';
+?>
 </body>
 </html>
 
