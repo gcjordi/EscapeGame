@@ -33,7 +33,7 @@
 					       <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
 					     </li>
 					     <li class="nav-item active">
-					       <a class="nav-link" href="./Controller/scene.php
+					       <a class="nav-link" href="./jeu.php
 ">Jeu <span class="sr-only"></span></a>
 					     </li>
 					   </ul>
