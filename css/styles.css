@@ -7,6 +7,29 @@
     
 }
 
+.couloir{
+    background: url(../images/couloir.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    
+}
+/*
+.jsp{
+    display: flex;
+    justify-content: center;
+
+}
+
+.suivant{
+    height: 50px;
+    width: 50px;
+    margin: 10px; 
+
+}
+*/
+
+
 .pageune{
     width: 100%;
     height: 100%;
