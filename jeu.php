@@ -53,7 +53,7 @@
 				        <h1>Le Casse au BDE</h1>
 				        <p></p>
 				         <p class="text-justify center">Trame a créer. Vous êtes membre du BDE et vous rentrer dans le bureau du BDE.</p>
-				         <a href="./intrigue1.php" class="btn btn-warning" role="button" aria-pressed="true">Jouer</a>
+				         <a href="./Controller/scene.php" class="btn btn-warning" role="button" aria-pressed="true">Jouer</a>
 				      </div> 
 			</div>
 			<div class="container">
