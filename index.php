@@ -95,11 +95,6 @@ Page deux
       
 </footer>
 
-<?php
-    require 'js/scene.php';
-?>
-
-
 </body>
 </html>
 
