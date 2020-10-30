@@ -1,5 +1,18 @@
 <?php
     require_once 'Model/Model.php';
+    require_once 'Model/Utilisateur.php';
+/*####### PAGE De Déconnexion A AMELIORER ######*/
+
+session_start();
+
+if(!isset($_SESSION['user_connected'])){
+    header("Location:connexion.php"); //ne pas mettre d'espace avant les ":"
+  }
+
+if(isset($_POST['deconnexion'])){
+   Utilisateur::disconnect();
+}             
+
 ?>
 
 
@@ -44,7 +57,7 @@
                            <a class="nav-link" href="./inscription.php">Inscription <span class="sr-only"></span></a>
                          </li>
                           <li class="nav-item active">
-                             <a href="./connection.php" class="btn btn-warning" role="button" aria-pressed="true">Connection</a>
+                             <a href="./connexion.php" class="btn btn-warning" role="button" aria-pressed="true">connexion</a>
                          </li>
                          <li class="nav-item active">
                               <a class="nav-link" href="#">Mon compte <span class="sr-only"></span></a>
@@ -63,15 +76,28 @@
     <br>
     <br>
     <br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-8 col-lg-8 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h1 class="card-title text-center">Mon compte</h5>
+                    <h5> Mes informations : </h5>
+                    <p> mon pseudo : <!-- <?php //echo Utilisateur::getIdentifiant();?>  Marche pas --> </p>
 
-<h1> Mes informations : </h1>
-<br>
+                    <h5> Mes classements : </h5>
+                    <br>
 
-<h1> Mes classement : </h1>
-<br>
-
-<h1> Modifier : </h1> <!-- se déco à faire -->
-<br>
+                    <h5> Modifier : </h5> <!-- se déco à faire -->
+                    <br>
+                    <form method="post">
+                    <input class="btn btn-warning mb-2" type="submit" name="deconnexion" value="Se deconnecter">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer>
       
 </footer>

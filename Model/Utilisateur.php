@@ -54,6 +54,10 @@ class Utilisateur
 		return true;
 	}
 
+	public static function getIdentifiant(){ // Marche pas 
+  	return $this->identifiant;
+	}
+
 	public static function getUserByIdent($identifiant){
 		try{
 			$q = Model::$pdo->prepare('SELECT id, identifiant, role FROM casse_utilisateur WHERE identifiant=:ident');
@@ -92,6 +96,6 @@ class Utilisateur
 	public static function disconnect(){
         session_unset();
         session_destroy();
-        header("Location : index.php"); // Marche pas pour raison inconnu
+        header("Location:index.php"); 
     }
 }

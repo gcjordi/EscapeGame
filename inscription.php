@@ -43,13 +43,14 @@ if(isset($_POST['inscrire'])){
 </head>
 <body>
 
+
 	<?= $erreur != "" ? '<p>'.htmlspecialchars($erreur).'</p>' : '' ?>
 
 
 	<form method="post">
 		<p>
 			<label for="identifiant">
-				Identifant : 
+				Pseudo : 
 			</label>
 			<input type="text" id="identifiant" name="identifiant" value="<?= htmlspecialchars($identifiant) ?>" required>
 		</p>
