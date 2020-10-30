@@ -14,6 +14,8 @@
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"> 
   <link rel="shortcut icon" href="./images/accounting.png" />
 
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script src="js/bootstrap.js"></script> 
   
 </head>
 
@@ -33,14 +35,23 @@
 					       <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
 					     </li>
 					     <li class="nav-item active">
-					       <a class="nav-link" href="./jeu.php
-">Jeu <span class="sr-only"></span></a>
+					       <a class="nav-link" href="./jeux.php">Jeux <span class="sr-only"></span></a>
 					     </li>
-					   </ul>
+					      <li class="nav-item active">
+					       <a class="nav-link" href="./inscription.php">Inscription <span class="sr-only"></span></a>
+					     </li>
+					      <li class="nav-item active">
+					      	 <a href="./connection.php" class="btn btn-warning" role="button" aria-pressed="true">Connection</a>
+					     </li>
+					 
+					   <!--S'identifier
+					   S'inscrire-->
 					 </div>
 				</div>
 			</div>
 		</nav>
+
+
 	</header>
 
 	<div class="fond" >
@@ -81,6 +92,8 @@ Page deux
 <?php
     require 'js/scene.php';
 ?>
+
+
 </body>
 </html>
 
