@@ -1,5 +1,12 @@
 <?php
 	require_once '../Model/Model.php';
+	require_once '../Model/Utilisateur.php';
+
+	session_start();
+
+	if(!isset($_SESSION['user_connected'])){
+  	header("Location : connection.php"); // Marche pas
+  }
 ?>
 
 

@@ -37,11 +37,17 @@
 					     <li class="nav-item active">
 					       <a class="nav-link" href="./jeux.php">Jeux <span class="sr-only"></span></a>
 					     </li>
+					     <li class="nav-item active">
+					       <a class="nav-link" href="./Classement.php">Classement <span class="sr-only"></span></a>
+					     </li>
 					      <li class="nav-item active">
 					       <a class="nav-link" href="./inscription.php">Inscription <span class="sr-only"></span></a>
 					     </li>
 					      <li class="nav-item active">
 					      	 <a href="./connection.php" class="btn btn-warning" role="button" aria-pressed="true">Connection</a>
+					     </li>
+					     <li class="nav-item active">
+					      	  <a class="nav-link" href="./profil.php">Mon compte <span class="sr-only"></span></a>
 					     </li>
 					 
 					   <!--S'identifier

@@ -88,4 +88,10 @@ class Utilisateur
 			return false;
 		return $tab_mdp[0]['mdp'];
 	}
+
+	public static function disconnect(){
+        session_unset();
+        session_destroy();
+        header("Location : index.php"); // Marche pas pour raison inconnu
+    }
 }
