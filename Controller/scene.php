@@ -5,7 +5,7 @@
 	session_start();
 
 	if(!isset($_SESSION['user_connected'])){
-  	header("Location:../connection.php"); // Marche pas pour raison inconnu
+  	header("Location:../connection.php"); //ne pas mettre d'espace avant les ":"
   }
 ?>
 
