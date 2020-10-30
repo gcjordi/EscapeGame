@@ -8,7 +8,7 @@ Tuteur : Antoine Chollet
 
 Github  [ici](https://github.com/samuel-robinet/EscapeGame)
 
-Heroku  [http://escapegame.umontp.fr](http://escapegame.umontp.fr)
+Heroku  [https://escapegame.umontp.fr](https://escapegame.umontp.fr)
 *Déploiement automatisé*
 
 Drive Google [ici](https://drive.google.com/drive/folders/1pBI3SzFK3pdj9aD3lpMhc2XVij7rbfO9?usp=sharing)
