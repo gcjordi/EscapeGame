@@ -26,7 +26,7 @@ class Utilisateur
 
 	public static function saveUtilisateur($identifiant, $crypt_mdp){
 		try{
-			$q = Model::$pdo->prepare('INSERT INTO casse.utilisateur(identifiant, mdp) VALUES(:i, :m)');
+			$q = Model::$pdo->prepare('INSERT INTO casse_utilisateur(identifiant, mdp) VALUES(:i, :m)');
 			$q->execute([
 				':i' => $identifiant,
 				':m' => $crypt_mdp
@@ -39,7 +39,7 @@ class Utilisateur
 	
 	public static function existByIdent($identifiant){
 		try{
-			$q = Model::$pdo->prepare('SELECT id FROM casse.utilisateur WHERE identifiant=:ident');
+			$q = Model::$pdo->prepare('SELECT id FROM casse_utilisateur WHERE identifiant=:ident');
 			$q->execute([
 				':ident' => $identifiant
 			]);
