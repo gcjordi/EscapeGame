@@ -115,7 +115,7 @@ if(isset($_POST['connexion'])){
 					<center>
 						<input class="btn btn-warning mb-2" type="submit" name="connexion" value="Se connecter">
 					</center>	
-					<center>ou si vous n'êtes pas inscrit</center>
+					<center>ou si tu n'es pas inscrit</center>
 					<br>	
 				 	<center>
 						<a href="./inscription.php" class="btn btn-warning" role="button" aria-pressed="true">S'inscrire</a>
