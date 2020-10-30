@@ -53,4 +53,39 @@ class Utilisateur
 			return false;
 		return true;
 	}
+
+	public static function getUserByIdent($identifiant){
+		try{
+			$q = Model::$pdo->prepare('SELECT id, identifiant, role FROM casse_utilisateur WHERE identifiant=:ident');
+			$q->execute([
+				':ident' => $identifiant
+			]);
+			$q->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
+			$tab_user = $q->fetchAll();		
+		}catch(PDOException $e){
+			echo $e->getMessage();
+			die();
+		}
+
+		if(empty($tab_user))
+			return false;
+		return $tab_user[0];
+	}
+
+	public static function getMdpByIdent($identifiant){
+		try{
+			$q = Model::$pdo->prepare('SELECT mdp FROM casse_utilisateur WHERE identifiant=:ident');
+			$q->execute([
+				':ident' => $identifiant
+			]);
+			$tab_mdp = $q->fetchAll();		
+		}catch(PDOException $e){
+			echo $e->getMessage();
+			die();
+		}
+
+		if(empty($tab_mdp))
+			return false;
+		return $tab_mdp[0]['mdp'];
+	}
 }

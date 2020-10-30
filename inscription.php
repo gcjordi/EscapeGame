@@ -1,7 +1,7 @@
 <?php
 /*####### PAGE D'INSCRIPTION A AMELIORER ######*/
 require_once 'Model/Utilisateur.php';
-
+session_start();
 $erreur = $identifiant = "";
 
 if(isset($_POST['inscrire'])){
@@ -14,6 +14,8 @@ if(isset($_POST['inscrire'])){
 			if(strlen($mdp) >= 6){
 				if($mdp === $remdp){
 					Utilisateur::saveUtilisateur($identifiant, password_hash($mdp, PASSWORD_BCRYPT));
+					$_SESSION['user_connected'] = Utilisateur::getUserByIdent($identifiant);
+					echo 'Inscription réussi ! ';
 				}else{
 					$erreur = "Les mots de passe sont différents";
 				}
