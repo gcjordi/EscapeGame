@@ -46,6 +46,8 @@ if(isset($_POST['connexion'])){
 </head>
 
 <body>
+
+
 	<header> 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
 			 <div class="container">
@@ -74,8 +76,7 @@ if(isset($_POST['connexion'])){
 					     </li>
 					     <li class="nav-item active">
 					      	  <a class="nav-link" href="./profil.php">Mon compte <span class="sr-only"></span></a>
-					     </li>
-					 
+					     </li>				 
 					   <!--S'identifier
 					   S'inscrire-->
 					 </div>

@@ -15,7 +15,7 @@ if(isset($_POST['inscrire'])){
 				if($mdp === $remdp){
 					Utilisateur::saveUtilisateur($identifiant, password_hash($mdp, PASSWORD_BCRYPT));
 					$_SESSION['user_connected'] = Utilisateur::getUserByIdent($identifiant);
-					echo 'Inscription réussi ! ';
+					header("Location:profil.php");
 				}else{
 					$erreur = "Les mots de passe sont différents";
 				}
