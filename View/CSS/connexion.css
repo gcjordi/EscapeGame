@@ -1,0 +1,44 @@
+.container_connexion {
+    margin: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_connexion form {
+    padding: 15px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_connexion form label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.container_connexion form input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container_connexion form p {
+    font-size: small;
+    font-weight: bold;
+    color: white;
+}
+
+.container_connexion form a {
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+}

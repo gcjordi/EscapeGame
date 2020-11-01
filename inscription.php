@@ -1,7 +1,21 @@
 <?php
-/*####### PAGE D'INSCRIPTION A AMELIORER ######*/
-require_once 'Model/Utilisateur.php';
-session_start();
+
+$CSS = [
+    'View/CSS/header1.css',
+    'View/CSS/styles1.css',
+    'View/CSS/inscription.css',
+];
+
+$JS = [
+
+];
+
+$LIBRAIRIES = [
+
+];
+
+require 'html_start.php';
+
 $erreur = $identifiant = "";
 
 if(isset($_POST['inscrire'])){
@@ -15,8 +29,7 @@ if(isset($_POST['inscrire'])){
 				if($mdp === $remdp){
 					Utilisateur::saveUtilisateur($identifiant, password_hash($mdp, PASSWORD_BCRYPT));
 					$_SESSION['user_connected'] = Utilisateur::getUserByIdent($identifiant);
-					echo 'Inscription réussi ! ';
-					header("Location:profil.php");
+					header("Location:index.php");
 				}else{
 					$erreur = "Les mots de passe sont différents";
 				}
@@ -31,43 +44,8 @@ if(isset($_POST['inscrire'])){
 		$erreur = "Remplir tous les champs";
 	}
 }
-
-
+require 'View/header.php';
+require 'View/inscription.php';
+require 'html_end.php';
 
 ?>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-
-
-	<?= $erreur != "" ? '<p>'.htmlspecialchars($erreur).'</p>' : '' ?>
-
-
-	<form method="post">
-		<p>
-			<label for="identifiant">
-				Pseudo : 
-			</label>
-			<input type="text" id="identifiant" name="identifiant" value="<?= htmlspecialchars($identifiant) ?>" required>
-		</p>
-		<p>
-			<label for="mdp">
-				Mot de Passe : 
-			</label>
-			<input type="password" id="mdp" name="mdp" required>
-		</p>
-		<p>
-			<label for="remdp">
-				Mot de Passe a nouveau : 
-			</label>
-			<input type="password" id="remdp" name="remdp" required>
-		</p>
-		<input type="submit" name="inscrire" value="S'inscrire">
-	</form>
-</body>
-</html>

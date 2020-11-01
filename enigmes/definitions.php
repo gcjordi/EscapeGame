@@ -52,7 +52,7 @@ function randomTab($tab){
 
 	<div id="bonne_rep">Bonnes réponses : </div>
 </body>
-<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../Librairies/jquery.js"></script>
 <script type="text/javascript">
 var def = <?= json_encode($rand_defs) ?>;
 var rep = <?= json_encode($rand_reps) ?>;
