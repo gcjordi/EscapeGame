@@ -40,7 +40,6 @@ if(isset($_POST['connexion'])){
 	}
 }
 
-
     require 'View/header.php';
     require 'View/connexion.php';
     require 'html_end.php';
