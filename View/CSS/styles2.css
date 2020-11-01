@@ -53,7 +53,7 @@ label {
 .box { box-shadow: 3px 3px 8px 0px #b5b5b5;}
 .box:hover { box-shadow: 3px 3px 16px 0px #b5b5b5;}
 .degrade_halloween{
-    background: linear-gradient(45deg, pink 0%, purple 100%);
+    background: #64fa7f
 }
 
 ::-webkit-scrollbar {									/* Scrollbars */
