@@ -3,11 +3,6 @@
 	require_once 'Model/Utilisateur.php';
 
 	session_start();
-
-	if(isset($_SESSION['user_connected'])){ ?>
-		<?php } ?>
-
-
 ?>
 
 
@@ -22,14 +17,14 @@
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"> 
   <link rel="shortcut icon" href="./images/accounting.png" />
 
- <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script src="https://code.jquery.com/jquery-latest.js"></script>
  <script src="js/bootstrap.js"></script> 
   
 </head>
 
 <body>
 
-	<?php
+<?php
  
 //Si le membre est connecté on affiche le menu-connection
 if(isset($_SESSION['user_connected'])){ ?>
@@ -56,9 +51,6 @@ if(isset($_SESSION['user_connected'])){ ?>
 					     <li class="nav-item active">
 					      	  <a class="nav-link" href="./profil.php">Mon compte <span class="sr-only"></span></a>
 					     </li>
-					 
-					   <!--S'identifier
-					   S'inscrire-->
 					 </div>
 				</div>
 			</div>
