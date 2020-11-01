@@ -21,7 +21,7 @@
         </a>
         <?php endif;
         if (isset($_SESSION["user_connected"])): ?>
-        <a class="item box degrade_halloween" href="compte.php">
+        <a class="item box degrade_halloween" href="profil.php">
             <p class="item_title">Mon Compte</p>
         </a>
         <?php endif; ?>
