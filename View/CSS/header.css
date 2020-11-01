@@ -1,0 +1,39 @@
+header {
+    background-color: white;
+    width: 98vw;
+    height: 64px;
+    border-bottom: solid 0.05em lightgrey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1vw;
+}
+
+header h1 {
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+}
+
+header .right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .right a {
+    background-color: #1e7e34;
+    height: 40px;
+    margin: 0 10px;
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}

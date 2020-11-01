@@ -19,7 +19,7 @@
 
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"> 
-  <link rel="shortcut icon" href="../images/accounting.png" />
+  <link rel="shortcut icon" href="../View/IMG/accounting.png" />
 
   
 </head>

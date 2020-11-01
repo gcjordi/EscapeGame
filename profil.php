@@ -25,7 +25,7 @@ if(isset($_POST['deconnexion'])){
 
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"> 
-  <link rel="shortcut icon" href="./images/accounting.png" />
+  <link rel="shortcut icon" href="View/IMG/accounting.png" />
 
  <script src="https://code.jquery.com/jquery-latest.js"></script>
  <script src="js/bootstrap.js"></script> 
@@ -37,7 +37,7 @@ if(isset($_POST['deconnexion'])){
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
              <div class="container">
                 <div class="navbar">
-                     <a class="navbar-brand" href="#"><img src="./images/accounting.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">Le Casse de la Compta</a>
+                     <a class="navbar-brand" href="#"><img src="View/IMG/accounting.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">Le Casse de la Compta</a>
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                        <span class="navbar-toggler-icon"></span>
                      </button>
