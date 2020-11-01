@@ -9,6 +9,7 @@
         <p>Score</p>
     </div>
 </div>
+    <div class="container_classement">
 <?php for ($ligne=1; $ligne<=100; $ligne++): ?>
     <div class="ligne">
         <div class="col-2">
@@ -22,4 +23,5 @@
         </div>
     </div>
 <?php endfor; ?>
+    </div>
 </div>
