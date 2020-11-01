@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"> 
   <link rel="shortcut icon" href="./images/accounting.png" />
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="js/bootstrap.js"></script> 
   
 </head>
