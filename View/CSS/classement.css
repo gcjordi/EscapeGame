@@ -1,0 +1,25 @@
+#container_classement {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.ligne {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ligne div {
+    border: solid 0.05em lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ligne p {
+    margin: 5px 0;
+}
+
+.ligne1 p {
+    font-weight: bold;
+}

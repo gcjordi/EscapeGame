@@ -2,7 +2,7 @@
 
     $CSS = [
         'View/CSS/header1.css',
-        'View/CSS/styles.css',
+        'View/CSS/styles1.css',
         'View/CSS/projet.css',
     ];
 
