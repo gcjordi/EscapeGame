@@ -1,0 +1,12 @@
+.accueil_container {
+    width: 85%;
+    margin: 10% 5% 0 5%;
+    padding:  2.5%;
+    background-color: #9fcdff;
+    border-radius: 30px;
+}
+
+.accueil_container h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}

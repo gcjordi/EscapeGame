@@ -6,22 +6,22 @@
     </div>
 
     <div class="right col-7">
-        <a class="item box">
+        <a class="item box" href="jeux.php">
             <p class="item_title">Jeux</p>
         </a>
-        <a class="item box">
+        <a class="item box" href="classement.php">
             <p class="item_title">Classement</p>
         </a>
         <?php if(!isset($_SESSION["user_connected"])): ?>
-        <a class="item box">
+        <a class="item box" href="inscription.php">
             <p class="item_title">Inscription</p>
         </a>
-        <a class="item box">
+        <a class="item box" href="connexion.php">
             <p class="item_title">Connexion</p>
         </a>
         <?php endif;
         if (isset($_SESSION["user_connected"])): ?>
-        <a class="item box">
+        <a class="item box" href="compte.php">
             <p class="item_title">Mon Compte</p>
         </a>
         <?php endif; ?>
