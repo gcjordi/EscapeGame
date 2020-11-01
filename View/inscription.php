@@ -12,6 +12,6 @@
     <input type="password" id="remdp" name="remdp" required>
     <input type="submit" name="inscrire" value="S'inscrire">
     <p>Ou si tu as déjà un compte !</p>
-    <a href="./inscription.php" class="">Se Connecter</a>
+    <a href="./connexion.php" class="">Se Connecter</a>
 </form>
 </div>
