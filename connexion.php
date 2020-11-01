@@ -66,7 +66,7 @@ if(isset($_POST['connexion'])){
 					       <a class="nav-link" href="./jeux.php">Jeux <span class="sr-only"></span></a>
 					     </li>
 					     <li class="nav-item active">
-					       <a class="nav-link" href="./Classement.php">Classement <span class="sr-only"></span></a>
+					       <a class="nav-link" href="./classement.php">Classement <span class="sr-only"></span></a>
 					     </li>
 					      <li class="nav-item active">
 					       <a class="nav-link" href="./inscription.php">Inscription <span class="sr-only"></span></a>
