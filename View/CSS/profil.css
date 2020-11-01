@@ -1,0 +1,21 @@
+.container_profil {
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container_profil div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.container_profil  a {
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+}
