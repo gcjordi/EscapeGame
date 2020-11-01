@@ -1,4 +1,4 @@
-.container_inscription {
+.container_connexion {
     margin: 40px;
     width: 100%;
     display: flex;
@@ -6,39 +6,38 @@
     align-items: center;
 }
 
-.container_inscription form {
+.container_connexion form {
     padding: 15px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
-.container_inscription form label {
+.container_connexion form label {
     margin-top: 15px;
     font-weight: bold;
 }
 
-.container_inscription form input {
-    background-color: white;
+.container_connexion form input {
     border: none;
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
-    color: black;
     font-weight: bold;
     cursor: pointer;
+    background-color: white;
+    color: black;
 }
 
-.container_inscription form p {
+.container_connexion form p {
     font-size: small;
     font-weight: bold;
-    color: white;
 }
 
-.container_inscription form a {
-    color: black;
+.container_connexion form a {
     font-size: xx-large;
     font-weight: bold;
 }

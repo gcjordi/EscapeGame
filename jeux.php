@@ -1,8 +1,8 @@
 <?php
 
 $CSS = [
-    'View/CSS/header1.css',
-    'View/CSS/styles1.css',
+    'View/CSS/header2.css',
+    'View/CSS/styles2.css',
     'View/CSS/jeux1.css',
 ];
 

@@ -1,9 +1,9 @@
 <?php
 
 $CSS = [
-    'View/CSS/header1.css',
-    'View/CSS/styles1.css',
-    'View/CSS/inscription.css',
+    'View/CSS/header2.css',
+    'View/CSS/styles2.css',
+    'View/CSS/inscription1.css',
 ];
 
 $JS = [

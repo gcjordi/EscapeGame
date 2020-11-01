@@ -12,10 +12,10 @@
     align-items: center;
     border-radius: 30px;
     padding: 15px;
+    width: 80%;
 }
 
 .container_profil  a {
-    color: black;
     font-size: xx-large;
     font-weight: bold;
 }

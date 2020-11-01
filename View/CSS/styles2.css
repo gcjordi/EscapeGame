@@ -1,5 +1,7 @@
 * {
     font-family: Arial;
+    color: white;
+    background-color: black;
 }
 
 html {
@@ -14,11 +16,25 @@ body {
 
 h1 {
     font-weight: normal;
+    background-color: transparent;
+}
+
+p {
+    background-color: transparent;
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
+    background-color: transparent;
+}
+
+h5 {
+    background-color: transparent;
+}
+
+label {
+    background-color: transparent;
 }
 
 .col-1 {width: 8.33%;}
@@ -37,7 +53,7 @@ a {
 .box { box-shadow: 3px 3px 8px 0px #b5b5b5;}
 .box:hover { box-shadow: 3px 3px 16px 0px #b5b5b5;}
 .degrade_halloween{
-    background: linear-gradient(45deg, maroon 0%, orange 50%, red 100%);
+    background: linear-gradient(45deg, red 0%, orange 100%);
 }
 
 ::-webkit-scrollbar {									/* Scrollbars */
