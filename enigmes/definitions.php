@@ -26,7 +26,7 @@ foreach ($tab_def as $def) {
 
 
 
-$rand_defs = randomTab($defs, sizeof($defs)); //Récupère aléatoirement toutes les définitions
+$rand_defs = randomTab($defs, sizeof($defs)); //Récupère aléatoirement toutes les définitions 
 $rand_reps = randomTab($reps, sizeof($reps)); //Récupère aléatoirement toutes les réponses
 
 /*
@@ -88,16 +88,16 @@ function randomTab($tab, $size){
 	<div id="cherche">
 		<form>
 			<label>A -</label>
-			<input type="number" id="alpha1" class="input_number" alpha="a" name="num_a">
+			<input type="number" id="alpha1" min="1" max="4" class="input_number" alpha="a" name="num_a">
 			<span style="font-weight: bold; font-size: 40px;">|</span>
 			<label>B -</label>
-			<input type="number" id="alpha2" class="input_number" alpha="b" name="num_b">
+			<input type="number" id="alpha2" min="1" max="4" class="input_number" alpha="b" name="num_b">
 			<span style="font-weight: bold; font-size: 40px;">|</span>
 			<label>C -</label>
-			<input type="number" id="alpha3" class="input_number" alpha="c" name="num_c">
+			<input type="number" id="alpha3" min="1" max="4" class="input_number" alpha="c" name="num_c">
 			<span style="font-weight: bold; font-size: 40px;">|</span>
 			<label>D -</label>
-			<input type="number" id="alpha4" class="input_number" alpha="d" name="num_d">
+			<input type="number" id="alpha4" min="1" max="4" class="input_number" alpha="d" name="num_d">
 			<input type="submit" id="tester_button" name="envoyer" value="Tester">
 			<span id="result"></span>
 		</form>
