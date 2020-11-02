@@ -127,6 +127,16 @@ function getBonneRep(){
 	return tab_rep;
 }
 
+$('.input_number').on('keyup', function(e){
+	var num = $(this).val()
+
+	if(num < 0){
+		$(this).val("1")
+	}else if(num > 4){
+		$(this).val("4")
+	}
+})
+
 
 $("#tester_button").on('click', function(e){
 	e.preventDefault();
