@@ -1,4 +1,16 @@
 <header>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- NE PAS EFFACER TEST DE SAM -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK0SYEQKVY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NK0SYEQKVY');
+    </script>
+    <!-- NE PAS EFFACER TEST DE SAM -->
+    
     <div class="left col-5">
         <a href="index.php">
             <h1>Le Casse de la Compta</h1>
