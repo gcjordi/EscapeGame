@@ -12,5 +12,4 @@
 		<div id="defs" style="margin-right:300px;"></div>
 		<div id="reps"></div>
 </div>
-<div class="close_objet" objet="affiche"></div>
 </div>

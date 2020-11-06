@@ -48,9 +48,12 @@ $("#ouvrir_cadenas").on('click', function(e){
 	}
 	
 	if(checkReponses(reponses)){
+        $('#cadenas').css('width', 'auto')
+        $('#cadenas').css('height', 'auto')
 		$('#img_cadenas').attr('src', 'View/IMG/cadenas_ouvert.png')
 		$('#form_cadenas').css('display', 'none')
 		$('#ouvrir_cadenas').css('display', 'none')
+        $('.close_objet').css('display', 'none')
 		cadenas_open = true;
 		setTimeout(() => $('#cadenas').fadeOut("slow"), 500)
 	}else{

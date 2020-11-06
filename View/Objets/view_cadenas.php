@@ -44,4 +44,3 @@
 
 </div>
 
-<div class="close_objet" objet="cadenas" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none"></div>
