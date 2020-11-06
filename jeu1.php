@@ -35,8 +35,7 @@ if(!isset($_SESSION['user_connected'])){
     <?php foreach ($OBJETS as $objet):
         require 'View/Objets/view_'.$objet.'.php';
     endforeach; ?>
-    <div class="close_objet" objet="affiche" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none"></div>
-    <div class="close_objet" objet="cadenas" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none"></div>
+    <div class="close_objet" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none"></div>
 </div>
 <?php
 require 'View/JS/jeu1.php';
