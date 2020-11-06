@@ -1,15 +1,12 @@
 <?php
 $TITLE = "JEU 1";
 
-
 require_once 'enigmes/definitions.php';
-
 
 $CSS = [
         'View/CSS/styles3.css',
         'View/CSS/definitions1.css'
 ];
-
 $JS = [
 	'View/JS/enigme_definition.php',
 ];
@@ -21,13 +18,10 @@ $SCENE = [
     'couloir',
     'porteBDE',
 ];
-
 $OBJETS = [
 	'affiche',
 	'cadenas'
-
 ];
-
 
 require 'html_start.php';
 if(!isset($_SESSION['user_connected'])){

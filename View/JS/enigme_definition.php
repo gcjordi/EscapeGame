@@ -54,21 +54,16 @@ $("#ouvrir_cadenas").on('click', function(e){
 		cadenas_open = true;
 		setTimeout(() => $('#cadenas').fadeOut("slow"), 500)
 	}else{
-		
-		$('#img_cadenas').addClass('shake')
+		$('#cadenas').addClass('shake')
 		$('#form_cadenas').addClass('shake')
 		setTimeout(() => {
-			$('#img_cadenas').removeClass('shake')
+			$('#cadenas').removeClass('shake')
 			$('#form_cadenas').removeClass('shake')
 		}, 1000)
 		
 	}
-
-
 	$(".input_number").val("")
 	$("#alpha1").focus()
-
-
 })
 
 function checkReponses(reponses){
