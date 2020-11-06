@@ -2,14 +2,9 @@
 	 margin-bottom: 55px;
 }
 
-#img_cadenas.shake {
-  animation: shakeImg 0.82s ease-in-out;
+#cadenas.shake {
+  animation: shake 0.82s ease-in-out;
 }
-
-#form_cadenas.shake{
-  animation: shakeForm 0.82s ease-in-out;
-}
-
 
 .close_objet{
 	position:absolute; 
@@ -38,7 +33,7 @@
 
 
 
-@keyframes shakeImg {
+@keyframes shake {
   10%, 90% {
     transform: translate(-51%, -50%);
   }
@@ -56,20 +51,3 @@
   }
 }
 
-@keyframes shakeForm {
-  10%, 90% {
-    transform: translate(-51%, 0);
-  }
-  
-  20%, 80% {
-    transform: translate(-49%, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate(-54%, 0);
-  }
-
-  40%, 60% {
-    transform: translate(-47%, 0);
-  }
-}
