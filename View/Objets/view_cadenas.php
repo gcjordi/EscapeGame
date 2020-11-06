@@ -6,8 +6,7 @@
     transform: translate(-50%, -50%);
     z-index: 10;
     background-color: transparent;
-    width: 400px;
-    height: 600px;
+    
 ">
 	
 		<img id="img_cadenas" src="View/IMG/cadenas_ferme.png" style="width: 100%; height: 100%; background: transparent">
@@ -22,7 +21,7 @@
     cursor: pointer;"></div>
 
     <div id="form_cadenas" style="    position: absolute;
-    top: 490px;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 11;
