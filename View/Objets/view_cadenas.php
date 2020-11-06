@@ -1,6 +1,6 @@
 <div id="cadenas" style="
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -14,7 +14,8 @@
     <div id="ouvrir_cadenas" alt="Ouvrir" style="background-color: transparent; background-color: transparent;
     position: fixed;
     top: 69px;
-    left: 0%;
+    left: 0;
+    transform: translate(0%, 0%);
     width: 100%;
     height: 231px;
     z-index: 12;

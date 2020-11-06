@@ -54,10 +54,10 @@ $("#ouvrir_cadenas").on('click', function(e){
 		cadenas_open = true;
 		setTimeout(() => $('#cadenas').fadeOut("slow"), 500)
 	}else{
-		$('#cadenas').addClass('shake')
+		$('#img_cadenas').addClass('shake')
 		$('#form_cadenas').addClass('shake')
 		setTimeout(() => {
-			$('#cadenas').removeClass('shake')
+			$('#img_cadenas').removeClass('shake')
 			$('#form_cadenas').removeClass('shake')
 		}, 1000)
 		
