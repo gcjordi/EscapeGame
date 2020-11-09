@@ -1,9 +1,10 @@
 <div class="container_inscription">
-<?= $erreur != "" ? '<p>'.htmlspecialchars($erreur).'</p>' : '' ?>
+
 
 
 <form method="post" class="degrade_halloween box">
     <h1>Inscris-toi !</h1>
+    <?= $erreur != "" ? '<p style="color: red;">'.htmlspecialchars($erreur).'</p>' : '' ?>
     <label for="identifiant">Pseudo :</label>
     <input type="text" id="identifiant" name="identifiant" value="<?= htmlspecialchars($identifiant) ?>" required>
     <label for="mdp">Mot de Passe :</label>
