@@ -7,6 +7,6 @@
         <input type="password" id="mdp" name="mdp" required>
         <input type="submit" name="connexion" value="Se connecter">
         <p>Ou si tu n'es pas inscrit...</p>
-        <a href="./inscription.php" class="">S'inscrire</a>
+        <a href="./inscription.php" class="">Inscris-toi !</a>
     </form>
 </div>
