@@ -1,29 +1,37 @@
 <script type="text/javascript">
     var objet_ouvert = "";
+    var show_inventaire = false;
 
     $('.acces').on('click', function (e){
         $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
         $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
     })
 
-
     $('.show_objet').on('click', function(e){
-    	var objet = canShowObjet($(this).attr('objet'));
-    	if(objet.show){
-    	    objet_ouvert = $(this).attr('objet');
-    		$('#'+$(this).attr('objet')).css('display', 'block')
-            $('.close_objet').css('display', 'block')
-    	}else{
-    		console.log("Impossible d'afficher");
-    	}
-    	
+        objet_ouvert = $(this).attr('objet');
+        $('#'+objet_ouvert).css('display', 'block')
+        $('.close_objet').css('display', 'flex')
     })
 
     $('.close_objet').on('click', function(e){
     	$('#'+objet_ouvert).css('display', 'none')
         $('.close_objet').css('display', 'none')
+        objet_ouvert = ""
     })
 
-
+    $('.show_bloc').on('click', function (e) {
+        if (show_inventaire) {
+            $('#blocnote').css('display', 'none');
+            $('#container_blocnote').css({'width':'6vh', 'height':'6vh'})
+            $('.show_bloc').css({'width':'6vh'})
+            show_inventaire = !show_inventaire;
+        }
+        else {
+            $('#blocnote').css('display', 'block');
+            $('#container_blocnote').css({'width':'25vw', 'height':'32vh'})
+            $('.show_bloc').css({'width':'25vw'})
+            show_inventaire = !show_inventaire;
+        }
+    })
 
 </script>

@@ -5,7 +5,6 @@ var sol = <?= json_encode($solRep) ?>;
 var cadenas_open = false; 	
 var alpha = ['a', 'b', 'c', 'd'];
 
-
 for(var i = 0; i<def.length; i++){
 	$('#defs').append('<p id="d_'+sol[def[i]]+'" al="'+alpha[i]+'" ><span class="alpha">'+alpha[i].toUpperCase()+'</span>|     '+def[i]+'</p>')
 	$('#reps').append('<p id="r_'+sol[rep[i]]+'" num="'+(i+1)+'" >'+rep[i]+'     |<span class="num"?>'+(i+1)+'</span></p>')
@@ -18,13 +17,11 @@ function getBonneRep(){
 		var num = $("#r_"+i).attr("num");
 		tab_rep[al] = num;
 	}
-	
 	return tab_rep;
 }
 
 $('.input_number').on('keyup', function(e){
 	var num = $(this).val()
-
 	if(num < 0){
 		$(this).val("1")
 	}else if(num > 4){
@@ -37,7 +34,6 @@ $('.input_number').on('keyup', function(e){
 	}
 })
 
-
 $("#ouvrir_cadenas").on('click', function(e){
 	e.preventDefault();
 	var reponses = [];
@@ -46,7 +42,6 @@ $("#ouvrir_cadenas").on('click', function(e){
 		var val = $('#alpha'+i).val()
 		reponses[attrAlpha] = val
 	}
-	
 	if(checkReponses(reponses)){
         $('#cadenas').css('width', 'auto')
         $('#cadenas').css('height', 'auto')
@@ -63,7 +58,6 @@ $("#ouvrir_cadenas").on('click', function(e){
 			$('#img_cadenas').removeClass('shake')
 			$('#form_cadenas').removeClass('shake')
 		}, 1000)
-		
 	}
 	$(".input_number").val("")
 	$("#alpha1").focus()
@@ -77,19 +71,4 @@ function checkReponses(reponses){
 	}
 	return b;
 }
-
-function canShowObjet(objet){
-
-	switch(objet){
-		case 'cadenas' :
-			var show = !cadenas_open;
-			return {"show" : show }
-		break;
-		default : 
-			return {'show' : true};
-		break;
-	}
-}
-
-
 </script>
