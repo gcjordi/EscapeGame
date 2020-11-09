@@ -21,13 +21,15 @@
 
     $('.show_bloc').on('click', function (e) {
         if (show_inventaire) {
+            $('#titre_BN').css('display', 'none');
             $('#blocnote').css('display', 'none');
             $('#container_blocnote').css({'width':'6vh', 'height':'6vh'})
             $('.show_bloc').css({'width':'6vh'})
             show_inventaire = !show_inventaire;
         }
         else {
-            $('#container_blocnote').css({'width':'25vw', 'height':'32vh'})
+            $('#titre_BN').css('display', 'block');
+            $('#container_blocnote').css({'width':'25vw', 'height':'35vh'})
             $('.show_bloc').css({'width':'25vw'})
             $('#blocnote').css('display', 'block');
             show_inventaire = !show_inventaire;
