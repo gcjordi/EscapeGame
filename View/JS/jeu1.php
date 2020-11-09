@@ -27,9 +27,9 @@
             show_inventaire = !show_inventaire;
         }
         else {
-            $('#blocnote').css('display', 'block');
             $('#container_blocnote').css({'width':'25vw', 'height':'32vh'})
             $('.show_bloc').css({'width':'25vw'})
+            $('#blocnote').css('display', 'block');
             show_inventaire = !show_inventaire;
         }
     })

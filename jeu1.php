@@ -36,11 +36,11 @@ if(!isset($_SESSION['user_connected'])){
         require 'View/Objets/view_'.$objet.'.php';
     endforeach; ?>
     <div class="close_objet" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none;"></div>
-    <div id="container_blocnote" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: rgba(255, 255, 255, 0.4); display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh">
+    <div id="container_blocnote" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: rgba(255, 255, 255, 0.4); display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">
         <div id="blocnote" style="display: none; width: 20vw; height: 20vh; background: transparent">
             <textarea style="height: 20vh; width: 20vw; background: transparent; color: white"></textarea>
         </div>
-        <div class="show_bloc" style="width: 6vh; height: 6vh; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; cursor: pointer; background: transparent">
+        <div class="show_bloc" style="width: 6vh; height: 6vh; display: flex; flex-direction: row; justify-content: flex-end; align-items: center; cursor: pointer; background: transparent; transition: width 300ms, height 300ms">
             <img src="View/IMG/bloc-note.png" alt="bloc-note" style="width: 6vh; height: 6vh; background: transparent">
         </div>
     </div>
