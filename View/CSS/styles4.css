@@ -1,0 +1,64 @@
+.titre {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+/* Bar et bouton */
+.bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, 
+      rgba(243, 68, 68, 0) 0%, 
+      rgba(243, 68, 68, 0) 3%,
+      #FF5660 40%,
+      #FF5660 60%,
+      rgba(243, 68, 68, 0) 97%,
+      rgba(243, 68, 68, 0) 100%); }
+
+.masque{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 165px;
+    height: 5px;
+    background-color: white;
+}
+.register {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 22px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 100px !important;
+    background-color: #FF5660;
+    color: #423e2f;
+    text-shadow: 0px 1px 0 rgba(247, 50, 86, 0.39);
+    font-weight: 600 !important;
+    font-size: 13px;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    transition: all .3s;
+    box-shadow: 0 2px 15px 0 rgba(243,210,68,0.4);
+    cursor: pointer;
+}
+
+.boxinscription{
+    position: relative;
+    margin-top: 22px;
+}
+
+.textegris {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #717171;
+}
