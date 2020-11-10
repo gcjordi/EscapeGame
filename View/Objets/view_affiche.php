@@ -10,9 +10,10 @@
       padding: 12px 30px;
       background-image: URL(View/IMG/Affiche_BDE_INFO_vide.jpg);
       background-size: cover;
-      width: 60vh;">
-		<div id="defs" style="margin: 30% 0% 0% 0%;"></div>
-		<div id="reps" style="margin: 30% 0% 0% 0%;"></div>
+      width: 60vh;
+      color:white;">
+		<div id="defs" style="margin: 80% 0% 0% 0%;"></div>
+		<div id="reps" style="margin: 80% 0% 0% 0%;"></div>
 </div>
 </div>
 
