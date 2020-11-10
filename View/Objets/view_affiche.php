@@ -1,15 +1,19 @@
 
 <div id="affiche" style="display: none;">
-	<div id="aff_definitions" style="display: inline-flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 300px;
-    padding: 12px 30px;">
-		<div id="defs" style="margin-right:300px;"></div>
-		<div id="reps"></div>
+  <div id="aff_definitions" style="display: inline-flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      height: 700px;
+      transform: translate(-50%, -50%);
+      padding: 12px 30px;
+      background-image: URL(View/IMG/Copie de Votre BDE INFO.jpg);
+      background-size: cover;
+      width: 60vh;">
+		<div id="defs" style="margin: 30% 0% 0% 0%;"></div>
+		<div id="reps" style="margin: 30% 0% 0% 0%;"></div>
 </div>
 </div>
+
+
