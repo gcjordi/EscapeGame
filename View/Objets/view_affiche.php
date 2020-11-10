@@ -12,8 +12,8 @@
       background-size: cover;
       width: 60vh;
       color:white;">
-		<div id="defs" style="margin: 80% 0% 0% 0%;"></div>
-		<div id="reps" style="margin: 80% 0% 0% 0%;"></div>
+		<div id="defs" style="margin: 80% 11% 0% -3%;"></div>
+		<div id="reps" style="margin: 80% -3% 0% 0%;"></div>
 </div>
 </div>
 
