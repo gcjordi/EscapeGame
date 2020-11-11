@@ -7,7 +7,7 @@
         z-index: 2;
     width: 3%;
     position: absolute;
-    top: 44%;
+    top: 42%;
     left: 30%;
     transform: translate(30%, 0%);
     cursor: pointer;
@@ -25,7 +25,7 @@
     z-index: 2;
     width: 3%;
     position: absolute;
-    top: 60%;
+    top: 62%;
     left: 30%;
     transform: translate(30%, 0%);
     cursor: pointer;">
