@@ -12,14 +12,7 @@
       background-size: cover;
       width: 60vh;
       color:white;">
-      <div id="def_rep" style="
-    position: relative;
-    top: 51%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 39%;
-">
+      <div id="def_rep">
             <div id="defs" style="display: flex;
     flex-direction: column;"></div>
             <div id="reps" style="display: flex;
