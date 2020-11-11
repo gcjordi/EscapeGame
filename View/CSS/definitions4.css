@@ -34,14 +34,14 @@
 }
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1300px){
     #def_rep{
-        font-size: 10px;
+        font-size: 13px;
         height: 48%;
     }
 
     #reps > p, #reps span {
-      font-size : 10px;
+      font-size : 13px;
     }
 }
 
