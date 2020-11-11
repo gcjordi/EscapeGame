@@ -7,7 +7,7 @@ var alpha = ['a', 'b', 'c', 'd'];
 
 for(var i = 0; i<def.length; i++){
 	$('#defs').append('<p id="d_'+sol[def[i]]+'" al="'+alpha[i]+'" ><span class="alpha">'+alpha[i].toUpperCase()+'</span>|     '+def[i]+'</p>')
-	$('#reps').append('<p id="r_'+sol[rep[i]]+'" num="'+(i+1)+'" >'+rep[i]+'     |<span class="num"?>'+(i+1)+'</span></p>')
+	$('#reps').append('<p id="r_'+sol[rep[i]]+'" num="'+(i+1)+'" ><span class="num">'+(i+1)+'</span> : '+rep[i]+'</p>')
 }
 
 function getBonneRep(){
