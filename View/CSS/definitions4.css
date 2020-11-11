@@ -26,7 +26,15 @@
 
 
 
+@media only screen and (max-width: 1024px){
+    #def_rep{
+        font-size: 15px;
+    }
 
+    #reps > p, #reps span {
+      font-size : 15px;
+    }
+}
 
 
 

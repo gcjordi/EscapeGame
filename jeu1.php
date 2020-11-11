@@ -5,7 +5,7 @@ require_once 'enigmes/definitions.php';
 
 $CSS = [
         'View/CSS/styles3.css',
-        'View/CSS/definitions3.css'
+        'View/CSS/definitions4.css'
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
