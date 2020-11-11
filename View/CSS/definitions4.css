@@ -28,11 +28,12 @@
 
 @media only screen and (max-width: 1024px){
     #def_rep{
-        font-size: 15px;
+        font-size: 13px;
+        height: 49%;
     }
 
     #reps > p, #reps span {
-      font-size : 15px;
+      font-size : 13px;
     }
 }
 
