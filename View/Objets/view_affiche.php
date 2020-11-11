@@ -12,9 +12,16 @@
       background-size: cover;
       width: 60vh;
       color:white;">
-		<div id="defs" style="margin: 80% 11% 0% -3%;"></div>
-		<div id="reps" style="display: flex;
+      <div id="def_rep" style="position: relative;
+    top: 51%;
+    display: flex;
+    flex-direction: column;">
+            <div id="defs" style="display: flex;
+    flex-direction: column;"></div>
+            <div id="reps" style="display: flex;
     width: 100%; height: 80px; justify-content:space-between;"></div>
+      </div>
+		
 </div>
 </div>
 
