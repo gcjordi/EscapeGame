@@ -16,7 +16,7 @@
             <div id="defs" style="display: flex;
     flex-direction: column;"></div>
             <div id="reps" style="display: flex;
-    width: 100%; height: 80px; justify-content:space-between;"></div>
+    width: 100%;justify-content:space-between;"></div>
       </div>
 		
 </div>
