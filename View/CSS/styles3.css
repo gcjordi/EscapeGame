@@ -88,3 +88,9 @@ label {
 .show_objet:hover{
      border : 1px solid white;
 }
+
+@media only screen and (max-width: 900px){
+    #def_rep{
+        font-size: small;
+    }
+}
