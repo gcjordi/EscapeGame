@@ -26,8 +26,36 @@ html {
   {
     display: none;
   }
-  
-  #other:checked ~ #otherValue
+ #other:checked ~ #otherValue
   {
     display: inline-block;
   }
+
+  #oui
+  {
+    display: none;
+  }
+  
+  #idfondees:checked ~ #oui
+  {
+    display: inline-block;
+  }
+ 
+  #non
+  {
+    display: none;
+  }
+  
+  #idPasfondees:checked ~ #non
+  {
+    display: inline-block;
+  }
+
+  input[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+  } 
+  input[type=checkbox]:checked + label {
+    color: #FF5660;
+    font-style: normal;
+  } 

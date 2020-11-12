@@ -7,18 +7,21 @@
   <legend>Vous pensez avoir fini le jeu ?</legend>
     <div>
         <p>Les inquiétudes du chef du département informatique sont-elles fondées ?</p>
-        <input type="checkbox" id="idfondees" name="fondees" value="1"> oui
-        <input type="checkbox" id="idPasfondees" name="pas_fondees" value="2"> non    
+        <input type="checkbox" id="idfondees" name="idfondees" value="idfondees">
+        <label for="idfondees">oui</label>
+        <input type="checkbox" id="idPasfondees" name="pas_fondees" value="idPasfondees">  
+        <label for="idPasfondees">non</label>   
     </div>
-    <div>
+    <div id="oui">
     <p>Il y a eu un détournement d’argent ?</p>
-        <input type="checkbox"  id="fondeesEtDetournement" name="fondeesEtDetournement" value="1"> oui
+        <input type="checkbox" id="other" name="fondeesEtDetournement" value="other"> oui
+        <input type="checkbox"  id="fondeesPasDeDetournement" name="fondeesPasDeDetournement" value="1"> non <br>
         <input type="text" id="otherValue" name="other">
-        <input type="checkbox"  id="fondeesPasDeDetournement" name="fondeesPasDeDetournement" value="1"> non
     </div>
-    <div>
+    <div id="non">
         <p>Le chef du département est vraiment inquiet vous êtes sur ?</p>
-        <input type="checkbox"  id="pasFondeesEtSur" name="pasFondeesEtSur" value="1"> oui
+        <input type="checkbox"  id="pasFondeesEtSur" name="pasFondeesEtSur" value="1">
+        <label for="pasFondeesEtSur">oui</label>
         <input type="checkbox"  id="pasFondeesEtSur" name="pasFondeesEtPasSur" value="1"> non
     </div>
     <div>
