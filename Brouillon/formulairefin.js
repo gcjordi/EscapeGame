@@ -1,3 +1,12 @@
+$('#idfondees').on('click', function(e) {
+    $('#oui').css('display', 'inline-block');
+    console.log('test') 
+})
+
+
+
+
+/*
 var otherCheckbox = document.querySelector('input[id="other"]');
 var other = document.querySelector('input[id="otherValue"]');
 
@@ -22,4 +31,4 @@ idfondees.onchange = function() {
   } else {
     oui.style.visibility = 'hidden';
   }
-};
+};*/

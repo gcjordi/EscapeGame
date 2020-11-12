@@ -1,7 +1,8 @@
 
-<!--
-    <script type="text/javascript" src="formulairefin.js"></script> -->
+
 <link rel="stylesheet" href="stylefin.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="formulairefin.js"></script>
 
 <form>
   <fieldset>
@@ -15,7 +16,7 @@
         <label for="idfondees">oui</label>
         <input type="radio" id="idPasfondees" name="pas_fondees" value="idPasfondees">  
         <label for="idPasfondees">non</label>   -->
-    </div>
+        </div>
     <div id="oui">
     <p>Il y a eu un détournement d’argent ?</p>
     <label><input name="radio2a" type="radio" id="other" value="fondeesEtDetournement" />Oui</label>
