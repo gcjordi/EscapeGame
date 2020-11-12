@@ -15,5 +15,6 @@
     <input type="submit" name="inscrire" value="S'inscrire">
     <p>Ou si tu as déjà un compte !</p>
     <a href="./connexion.php" class="">Connecte toi !</a>
+    
 </form>
 </div>
