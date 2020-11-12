@@ -51,7 +51,7 @@ html {
     display: inline-block;
   }
 
-  input[type=checkbox] + label {
+  input + label {
     color: #ccc;
     font-style: italic;
   } 
