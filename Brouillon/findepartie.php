@@ -1,10 +1,6 @@
 
 
-<link rel="stylesheet" href="stylefin.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="formulairefin.js"></script>
-
-<form>
+<form action="javascript:verif()">
   <fieldset>
   <legend>Vous pensez avoir fini le jeu ?</legend>
        <div>
@@ -19,25 +15,26 @@
         </div>
     <div id="oui">
     <p>Il y a eu un détournement d’argent ?</p>
-    <label><input name="radio2a" type="radio" id="other" value="fondeesEtDetournement" />Oui</label>
+    <label><input name="radio2a" type="radio" id="fondeesEtDetournement" value="fondeesEtDetournement" />Oui</label>
     <label><input name="radio2a" type="radio" id="fondeesPasDeDetournement" value="fondeesPasDeDetournement" />Non</label>
-       
-      <!--  <input type="checkbox" id="other" name="fondeesEtDetournement" value="other"> oui
-        <input type="checkbox"  id="fondeesPasDeDetournement" name="fondeesPasDeDetournement" value="1"> non--> 
-        <br>
-        <input type="text" id="otherValue" name="other"> 
     </div>
     <div id="non">
         <p>Le chef du département est vraiment inquiet vous êtes sur ?</p>
-        <input type="checkbox"  id="pasFondeesEtSur" name="pasFondeesEtSur" value="1">
-        <label for="pasFondeesEtSur">oui</label>
-        <input type="checkbox"  id="pasFondeesEtSur" name="pasFondeesEtPasSur" value="1"> non
+        <label><input name="radio3a" type="radio" id="pasFondeesEtSur" value="pasFondeesEtSur" />Oui</label>
+        <label><input name="radio3a" type="radio" id="pasFondeesEtPasSur" value="pasFondeesEtPasSur" />Non</label>
+        
+    </div>
+    <div id="ouioui">
+        <p>De combien pensez-vous est le détournement (100) ?</p>
+        <input type="text" id="nbr">
     </div>
     <div>
-    <p>Test</p>
-      <input type="checkbox" id="other" name="interest" value="other">
-      <label for="other">Autre</label>
-      <input type="text" id="otherValue" name="other">
+    <input type="submit" value="Valider">
+    <span id="msg" style="color:red"></span>
     </div>
   </fieldset>
 </form>
+
+<link rel="stylesheet" href="stylefin.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="formulairefin.js"></script>

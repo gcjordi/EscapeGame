@@ -46,6 +46,10 @@ html {
     display: none;
   }
   
+  #ouioui
+  {
+    display: none;
+  }
   #idPasfondees:checked ~ #non
   {
     display: inline-block;

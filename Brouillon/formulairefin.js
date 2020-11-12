@@ -1,34 +1,43 @@
+var show_Q2Oui = true;
+var show_Q2Non = true;
+var text =true;
+
 $('#idfondees').on('click', function(e) {
-    $('#oui').css('display', 'inline-block');
-    console.log('test') 
+    if (show_Q2Oui) {
+        $('#oui').css('display', 'inline-block');
+        $('#non').css('display', 'none');
+        show_Q2Oui=!show_Q2Oui;
+        $('#fondeesEtDetournement').on('click', function(e) {
+            $('#ouioui').css('display', 'inline-block');})
+    }else{
+        $('#oui').css('display', 'none');
+        $('#ouioui').css('display', 'none');
+        show_Q2Oui=!show_Q2Oui;
+    }
+
+})
+$('#idPasfondees').on('click', function(e) {
+    if (show_Q2Non) {
+        $('#oui').css('display', 'none');
+        $('#ouioui').css('display', 'none');
+        $('#non').css('display', 'inline-block');
+        show_Q2Non=!show_Q2Non;
+    }else{
+        $('non').css('display', 'none');
+        show_Q2Non=!show_Q2Non;
+    }
 })
 
-
-
-
-/*
-var otherCheckbox = document.querySelector('input[id="other"]');
-var other = document.querySelector('input[id="otherValue"]');
-
-var idfondees = document.querySelector('input[id="idfondees"]');
-var oui = document.querySelector('input[id="oui"]');
-other.style.visibility = 'hidden';
-oui.style.visibility = 'hidden';
-
-otherCheckbox.onchange = function() {
-  if(otherCheckbox.checked) {
-    other.style.visibility = 'visible';
-    other.value = '';
-  } else {
-    other.style.visibility = 'hidden';
-  }
-};
-
-idfondees.onchange = function() {
-  if(idfondees.checked) {
-    oui.style.visibility = 'visible';
-    oui.value = '';
-  } else {
-    oui.style.visibility = 'hidden';
-  }
-};*/
+function verif(){ 
+    var nbr=document.getElementById('nbr').value;
+    if (isNaN(nbr)){
+        document.getElementById("msg").innerHTML="Tout faux -> retour début";
+    }if (nbr==100){
+        document.getElementById("msg").innerHTML="Bravo";
+        return true;
+    }else{
+        document.getElementById("msg").innerHTML="Faux -> retour page ou il etait avant";
+        return false;
+    }
+    
+}
