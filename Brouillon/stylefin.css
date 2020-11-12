@@ -12,14 +12,14 @@ html {
   }
   
   fieldset {
-    background: cyan;
-    border: 5px solid blue;
+    background: white;
+    border: 5px solid #FF5660;
   }
   
   legend {
     padding: 10px;
-    background: blue;
-    color: cyan;
+    background:#FF5660;
+    color:white;
   }
   
   #otherValue

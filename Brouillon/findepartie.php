@@ -1,15 +1,6 @@
-<?php 
 
-$CSS = [
-        'stylefin.css'
-];
-
-$LIBRAIRIES = [
-        'Librairies/jquery-3.5.1.min.js',
-        'formulairefin.js'
-];
-
-?>
+<script type="text/javascript" src="formulairefin.js"></script>
+<link rel="stylesheet" href="stylefin.css" />
 
 <form>
   <fieldset>
