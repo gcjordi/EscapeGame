@@ -45,6 +45,11 @@ if(!isset($_SESSION['user_connected'])){
             <img src="View/IMG/bloc-note.png" alt="bloc-note" style="width: 6vh; height: 6vh">
         </div>
     </div>
+    <div id="container_reponse" style="position: fixed;bottom: 5vh;right: 15vw;width: 6vh;height: 6vh;border-radius: 6vh;background: white;display: flex;flex-direction: column;justify-content: space-between;align-items: center;z-index: 10000;padding: 3vh;transition: width 300ms, height 300ms;margin-right: 10px;">
+        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/47298/check-mark-button-emoji-clipart-md.png"
+         alt="reponse" style="width: 6vh; height: 6vh;">
+        </div>
+    </div>
 </div>
 <?php
 require 'View/JS/jeu1.php';
