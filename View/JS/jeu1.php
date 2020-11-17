@@ -1,6 +1,7 @@
 <script type="text/javascript">
     var objet_ouvert = "";
     var show_inventaire = false;
+    var show_rep = false;
 
     $('.acces').on('click', function (e){
         $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
@@ -25,6 +26,7 @@
             $('#blocnote').css('display', 'none');
             $('#container_blocnote').css({'width':'6vh', 'height':'6vh'})
             $('.show_bloc').css({'width':'6vh'})
+            $('#container_reponse').css('display', 'block');
             show_inventaire = !show_inventaire;
         }
         else {
@@ -32,7 +34,19 @@
             $('#container_blocnote').css({'width':'25vw', 'height':'35vh'})
             $('.show_bloc').css({'width':'25vw'})
             $('#blocnote').css('display', 'block');
+            $('#container_reponse').css('display', 'none');
             show_inventaire = !show_inventaire;
+        }
+    })
+
+    $('.show_reponse').on('click', function (e) {
+        if (show_rep) {
+            $('#reponse').css('display', 'none');
+            show_rep = !show_rep;
+        }
+        else {
+            $('#reponse').css('display', 'block');
+            show_rep = !show_rep;
         }
     })
 

@@ -34,10 +34,8 @@ function verif(){
         document.getElementById("msg").innerHTML="Tout faux -> retour début";
     }if (nbr==100){
         document.getElementById("msg").innerHTML="Bravo";
-        return true;
     }else{
         document.getElementById("msg").innerHTML="Faux -> retour page ou il etait avant";
-        return false;
     }
     
 }
