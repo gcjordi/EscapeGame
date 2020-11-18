@@ -28,7 +28,9 @@ $('#idPasfondees').on('click', function(e) {
     }
 })
 
+
 function verif(){ 
+    verif.preventDefault() 
     var nbr=document.getElementById('nbr').value;
     if (isNaN(nbr)){
         document.getElementById("msg").innerHTML="Tout faux -> retour début";

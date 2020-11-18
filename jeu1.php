@@ -48,7 +48,7 @@ if(!isset($_SESSION['user_connected'])){
     </div>
     <div id="container_reponse" style="display: block; position: fixed;bottom: 5vh;right: 15vw;width: 6vh;height: 6vh;border-radius: 6vh;background: white;display: flex;flex-direction: column;justify-content: space-between;align-items: center;z-index: 10000;padding: 3vh;transition: width 300ms, height 300ms;margin-right: 10px;">      
         <div id="reponse" style="display: none; z-index: 2; position: absolute;top: -400%;left: -500%;">
-                    <form action="javascript:verif()">
+                    <form method="post" action="javascript:verif()">
                         <fieldset>
                         <legend>Vous pensez avoir fini le jeu ?</legend>
                             <div>
