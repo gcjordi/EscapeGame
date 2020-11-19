@@ -20,6 +20,7 @@ $SCENE = [
     'couloir',
     'porteBDE',
     'bureauBDE',
+    'ordinateur',
 ];
 $OBJETS = [
 	'affiche',
