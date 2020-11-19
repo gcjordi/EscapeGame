@@ -1,6 +1,13 @@
-<div id="porteBDE" style="background: #a7a192; height: 100vh; width: 100vw">
-    <div class="acces" id="couloir" style="position: fixed; background: red; height: 100px; z-index: 2">
-        Aller dans le Couloir
+<div id="porteBDE" style="background: #a7a192; height: 100vh; width: 100vw; display: none">
+    <div class="acces" id="couloir" style="    position: fixed;
+    z-index: 2;
+    flex-direction: column;
+    bottom: 1vh;
+    left: 2vw;
+    cursor: pointer;
+">
+        <img src="View/IMG/retour.png" style="width: 5vw">
+        <p>Couloir</p>
     </div>
     <div class="show_objet" objet="cadenas" id="porte" style="
         position: absolute;

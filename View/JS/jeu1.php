@@ -5,7 +5,7 @@
 
     $('.acces').on('click', function (e){
         $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
-        $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+        $('#container').children('#'+$(this)[0]['id']).css('display', 'flex')
     })
 
     $('.show_objet').on('click', function(e){

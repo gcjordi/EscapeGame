@@ -4,10 +4,6 @@
     margin: 0 auto;
   }
   
-  div {
-    margin-bottom: 10px;
-  }
-  
   fieldset {
     background: white;
     border: 5px solid #FF5660;
