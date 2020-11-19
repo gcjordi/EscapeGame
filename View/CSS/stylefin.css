@@ -23,6 +23,7 @@
   {
     display: none;
   }
+
  #other:checked ~ #otherValue
   {
     display: inline-block;

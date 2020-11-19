@@ -10,6 +10,7 @@ $CSS = [
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
+    'View/JS/jeu1.php',
 ];
 
 $LIBRAIRIES = [
@@ -87,6 +88,5 @@ if(!isset($_SESSION['user_connected'])){
 </div>
 <script type="text/javascript" src="View/JS/formulairefin.js"></script>
 <?php
-require 'View/JS/jeu1.php';
 require 'html_end.php';
 ?>
