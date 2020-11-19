@@ -1,6 +1,6 @@
 
 
-<form action="javascript:verif()">
+<form>
   <fieldset>
   <legend>Vous pensez avoir fini le jeu ?</legend>
        <div>
@@ -29,7 +29,7 @@
         <input type="text" id="nbr">
     </div>
     <div>
-    <input type="submit" value="Valider">
+    <input type="submit" id="valider" value="Valider">
     <span id="msg" style="color:red"></span>
     </div>
   </fieldset>
