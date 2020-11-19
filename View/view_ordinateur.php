@@ -24,12 +24,14 @@
     <?php
         endfor;
     ?>
-
-    <script type="text/javascript" src="../Librairies/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript">
-        $('p').children('input').on("focus", function (e) {
-            for<qw<
-            $('p').children('input').attr('ligne')
-        })
-    </script>
+    <div class="acces" id="bureauBDE" style="    position: fixed;
+    z-index: 2;
+    flex-direction: column;
+    bottom: 1vh;
+    left: 2vw;
+    cursor: pointer;
+">
+        <img src="View/IMG/retour.png" style="width: 5vw">
+        <p>Bureau du BDE</p>
+    </div>
 </div>
