@@ -18,9 +18,6 @@
     </div>
 
     <div class="right col-7">
-        <a class="item box degrade_halloween" href="jeux.php">
-            <p class="item_title">Jeux</p>
-        </a>
         <a class="item box degrade_halloween" href="classement.php">
             <p class="item_title">Classement</p>
         </a>
