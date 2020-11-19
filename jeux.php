@@ -3,7 +3,6 @@
 $CSS = [
     'View/CSS/header2.css',
     'View/CSS/styles5.css',
-    'View/CSS/styles4.css',
     'View/CSS/jeux1.css',
 ];
 
