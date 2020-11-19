@@ -1,6 +1,12 @@
 <div id="couloir" style="background: red; height: 100vh; width: 100vw">
-    <img src="View/IMG/couloir.png" class="fond" style="position: fixed; height: 100vh; width: 100vw; z-index: 1">
-    <div class="acces" id="porteBDE" style="position: fixed; background: yellow; height: 100px; z-index: 2"></div>
+    <img src="View/IMG/couloir.png" class="fond">
+    <div class="acces" id="porteBDE" style="    height: 64vh;
+    z-index: 2;
+    width: 9vw;
+    top: 27vh;
+    left: 82vw;
+    position: fixed;
+    cursor: pointer;"></div>
 	<img class="show_objet" objet="affiche_bde" src="View/IMG/Votre_BDE_INFO_2.jpg" style="
         z-index: 2;
     width: 3%;

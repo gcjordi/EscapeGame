@@ -4,7 +4,7 @@ $TITLE = "JEU 1";
 require_once 'enigmes/definitions.php';
 
 $CSS = [
-        'View/CSS/styles3.css',
+        'View/CSS/styles5.css',
         'View/CSS/definitions4.css',
         'View/CSS/stylefin.css',
 ];
