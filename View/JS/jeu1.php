@@ -5,13 +5,20 @@
 
     $('.acces').on('click', function (e){
         $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
-        $('#container').children('#'+$(this)[0]['id']).css('display', 'flex')
+        $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
     })
 
     $('.show_objet').on('click', function(e){
-        objet_ouvert = $(this).attr('objet');
-        $('#'+objet_ouvert).css('display', 'block')
-        $('.close_objet').css('display', 'flex')
+        if ($(this).attr("class")=="show_objet") {
+            objet_ouvert = $(this).attr('objet');
+            $('#'+objet_ouvert).css('display', 'block')
+            $('.close_objet').css('display', 'flex')
+        }
+        else if ($(this).attr("class")=="acces") {
+            $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
+            $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+        }
+
     })
 
     $('.close_objet').on('click', function(e){
@@ -48,6 +55,11 @@
             $('#reponse').css('display', 'block');
             show_rep = !show_rep;
         }
+    })
+
+    $('#bureauBDE').on('click', function (e) {
+        console.log($(this).attr('class'))
+
     })
 
 </script>

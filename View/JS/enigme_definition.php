@@ -51,7 +51,10 @@ $("#ouvrir_cadenas").on('click', function(e){
         $('.close_objet').css('display', 'none')
 		cadenas_open = true;
 		setTimeout(() => $('#cadenas').fadeOut("slow"), 500)
-	}else{
+        $('#bureauBDE').toggleClass('show_objet')
+        $('#bureauBDE').toggleClass('acces')
+
+    }else{
 		$('#img_cadenas').addClass('shake')
 		$('#form_cadenas').addClass('shake')
 		setTimeout(() => {

@@ -9,7 +9,7 @@
         <img src="View/IMG/retour.png" style="width: 5vw">
         <p>Couloir</p>
     </div>
-    <div class="show_objet" objet="cadenas" id="porte" style="
+    <div class="show_objet" objet="cadenas" id="bureauBDE" style="
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
@@ -17,5 +17,6 @@
         width: 300px;
         height: 500px;
         background-image: Url(View/IMG/PorteBDE.png);">
+
     </div>
 </div>

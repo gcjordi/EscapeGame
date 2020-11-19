@@ -19,6 +19,7 @@ $LIBRAIRIES = [
 $SCENE = [
     'couloir',
     'porteBDE',
+    'bureauBDE',
 ];
 $OBJETS = [
 	'affiche',
