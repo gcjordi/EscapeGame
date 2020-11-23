@@ -1,6 +1,6 @@
 # Escape Game
 
-Membres : [William Donnette](https://github.com/william-donnette), [Samuel Robinet](https://github.com/samuel-robinet), [Adrien Segura](https://github.com/adrien-segura), [Santiago Martinez](https://github.com/santiago-martinez117), [Uy Nguyen]().
+Membres : [William Donnette](https://github.com/william-donnette), [Samuel Robinet](https://github.com/samuel-robinet), [Adrien Segura](https://github.com/adrien-segura), [Santiago Martinez](https://github.com/santiago-martinez117).
 
 Tuteur : Antoine Chollet
 
