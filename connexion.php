@@ -2,8 +2,9 @@
 
 $CSS = [
     'View/CSS/header2.css',
-    'View/CSS/styles5.css',
-    'View/CSS/connexion2.css',
+	'View/CSS/styles5.css',
+	'View/CSS/styles6.css',
+	'View/CSS/inscription1.css',
 ];
 
 $JS = [
