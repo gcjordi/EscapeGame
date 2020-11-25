@@ -1,7 +1,6 @@
 header {
     width: 98vw;
     height: 64px;
-    border-bottom: solid 0.05em lightgrey;
     display: flex;
     flex-direction: row;
     align-items: center;
