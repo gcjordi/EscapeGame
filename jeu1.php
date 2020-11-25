@@ -21,10 +21,12 @@ $SCENE = [
     'porteBDE',
     'bureauBDE',
     'ordinateur',
+    'toilette',
 ];
 $OBJETS = [
 	'affiche',
 	'cadenas',
+    'puzzle',
 ];
 
 require 'html_start.php';

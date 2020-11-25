@@ -7,6 +7,13 @@
     left: 82vw;
     position: fixed;
     cursor: pointer;"></div>
+    <div class="acces" id="toilette" style="    height: 62vh;
+    z-index: 2;
+    width: 6vw;
+    top: 25vh;
+    left: 18vw;
+    position: fixed;
+    cursor: pointer;"></div>
 	<img class="show_objet" objet="affiche_bde" src="View/IMG/Votre_BDE_INFO_2.jpg" style="
         z-index: 2;
     width: 3%;
