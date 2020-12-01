@@ -2,7 +2,8 @@
 
 $CSS = [
     'View/CSS/header2.css',
-    'View/CSS/styles5.css',
+	'View/CSS/styles5.css',
+	'View/CSS/styles6.css',
     'View/CSS/inscription1.css',
 ];
 
@@ -34,7 +35,7 @@ if(isset($_POST['inscrire'])){
 					$erreur = "Les mots de passe sont différents";
 				}
 			}else{
-				$erreur = "Le mot de passe de faire minimum 6 caractères";
+				$erreur = "Le mot de passe doit faire un minimum 6 caractères";
 			}
 			
 		}else{

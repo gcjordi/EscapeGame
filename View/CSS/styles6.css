@@ -1,0 +1,12 @@
+/* Uniquement que pour le site web => pas le jeu */
+
+body {
+  background-color: #21243a;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    color:white!important;
+}
