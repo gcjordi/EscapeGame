@@ -11,7 +11,7 @@
     $('.show_objet').on('click', function(e){
         if ($(this).attr("class")=="show_objet") {
             objet_ouvert = $(this).attr('objet');
-            $('#'+objet_ouvert).css('display', 'block')
+            $('#'+objet_ouvert).css('display', 'flex')
             $('.close_objet').css('display', 'flex')
         }
         else if ($(this).attr("class")=="acces") {
