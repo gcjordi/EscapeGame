@@ -9,7 +9,7 @@
         <img src="View/IMG/retour.png" style="width: 5vw">
         <p>Couloir</p>
     </div>
-    <div class="show_objet" objet="cadenas" id="bureauBDE" style="
+    <div class="<?= $_SESSION['user_connected']->getAttr('role') == 'admin' ? 'acces' : 'show_objet' ?>" objet="cadenas" id="bureauBDE" style="
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
