@@ -15,18 +15,32 @@
     #puzzle1 {
         position: absolute;
         top: 0;
+        background: lightgrey;
+        border: solid black 1px;
+        border-bottom: none;
     }
     #puzzle11 {
         position: absolute;
         top: 10vh;
+        background: lightgrey;
+        border: solid black 1px;
+        border-top: none;
+        border-bottom: none;
     }
     #puzzle2 {
         position: absolute;
         top: 23vh;
+        background: lightgrey;
+        border: solid black 1px;
+        border-top: none;
+        border-bottom: none;
     }
     #puzzle3 {
         position: absolute;
         top: 35vh;
+        background: lightgrey;
+        border: solid black 1px;
+        border-top: none;
     }
     #puzzle #papier6 {
         height: 15vh;
@@ -75,8 +89,7 @@
     z-index: 10;
     height: 60vh;
     width: 80vw;
-    flex-direction: row;
-    background-color: purple">
+    flex-direction: row;">
     <div id="dragzone">
         <div class="ligne">
 
