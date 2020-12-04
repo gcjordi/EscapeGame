@@ -30,7 +30,7 @@
         width: 20vw;
     }
 </style>
-<div id="puzzle" style="display: flex;
+<div id="puzzle" style="display: none;
     position: absolute;
     top: 50%;
     left: 50%;
