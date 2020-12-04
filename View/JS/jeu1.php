@@ -4,8 +4,15 @@
     var show_rep = false;
 
     $('.acces').on('click', function (e){
-        $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
-        $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+        var acces = true;
+        if($(this)[0]['id'] == 'bureauBDE'){
+            acces = cadenas_open;
+        }
+
+        if(acces){
+            $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
+            $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+        }
     })
 
     $('.show_objet').on('click', function(e){
