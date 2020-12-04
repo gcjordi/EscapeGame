@@ -181,3 +181,7 @@ textarea{
 .fond {
     position: fixed; height: 100vh; width: 100vw; z-index: 1;
 }
+
+input{
+    outline: none;
+}
