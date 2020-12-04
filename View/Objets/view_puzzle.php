@@ -2,31 +2,68 @@
     #dragzone, #dropZone {
         display: flex;
         flex-direction: column;
-        height: 80vh;
+        height: 60vh;
         width: 40vw;
+        position: relative;
     }
     .ligne {
         display: flex;
         flex-direction: row;
-        height: 40vh;
+        height: 20vh;
         width: 40vw;
     }
-    #dropBox1, #dropBox2, #dropBox3, #dropBox4 {
+    #puzzle1 {
+        position: absolute;
+        top: 0;
+    }
+    #puzzle11 {
+        position: absolute;
+        top: 10vh;
+    }
+    #puzzle2 {
+        position: absolute;
+        top: 23vh;
+    }
+    #puzzle3 {
+        position: absolute;
+        top: 35vh;
+    }
+    #puzzle #papier6 {
+        height: 15vh;
+        width: 20vw;
+    }
+    .dropBox {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40vh;
+        height: 20vh;
         width: 20vw;
         position: relative;
     }
     #puzzle img {
-        height: 40vh;
+        height: 20vh;
         width: 20vw;
     }
-    #puzzle img#dog {
+    #puzzle #puzzle1, #puzzle #puzzle3 {
+        width: 40vw;
+        height: 10vh;
+    }
+    #puzzle #papier5, #puzzle #dropBox5, #puzzle #dropBox6 {
+        width: 20vw;
+        height: 10vh;
+    }
+    #puzzle #papier0 {
+        height: 100%;
+        width: 100%;
+    }
+    #puzzle #dropBox3 {
+        height: 13vh;
+    }
+    #puzzle #dropBox4 {
+        height: 8vh;
     }
     #dragzone .ligne div {
-        height: 40vh;
+        height: 20vh;
         width: 20vw;
     }
 </style>
@@ -36,46 +73,66 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    height: 80vh;
+    height: 60vh;
     width: 80vw;
     flex-direction: row;
     background-color: purple">
     <div id="dragzone">
         <div class="ligne">
-            <div id="papier1" position="" top="" left="" bottom="" right="" ondragover="allowDrop(event)">
-                <img id="cat" src="https://www.veterinarypracticenews.com/wp-content/uploads/2019/10/bigstock-Four-Kittens-On-A-White-Backgr-2730282.jpg" draggable="true" ondragstart="drag(event)" width="300"/>
+
+        </div>
+        <div class="ligne">
+            <div id="emppapier1" position="absolute" top="0" left="0" bottom="" right="" ondragover="allowDrop(event)">
+                <img id="papier2" src="View/IMG/puzzle/papier2.png" draggable="true" ondragstart="drag(event)"/>
             </div>
-            <div id="papier2" position="" top="" left="" bottom="" right="" ondragover="allowDrop(event)">
-                <img id="dog" src="https://www.wallpaperflare.com/static/800/62/574/puppies-white-background-paws-yellow-wallpaper-preview.jpg" draggable="true" ondragstart="drag(event)" width="300"/>
+            <div id="emppapier2" position="" top="0" left="" bottom="" right="0" ondragover="allowDrop(event)">
+                <img id="papier6" src="View/IMG/puzzle/papier6.png" draggable="true" ondragstart="drag(event)"/>
             </div>
         </div>
         <div class="ligne">
-            <div id="papier3" position="" top="" left="" bottom="" right="" ondragover="allowDrop(event)">
-                <img id="mouse" src="https://www.adamspestcontrol.com/cms-files/size-992x992/adams-mouse-600x600.jpg" draggable="true" ondragstart="drag(event)" width="300"/>
+            <div id="emppapier3" position="" top="" left="0" bottom="0" right="" ondragover="allowDrop(event)">
+                <img id="papier1" src="View/IMG/puzzle/papier1.png" draggable="true" ondragstart="drag(event)">
             </div>
-            <div id="papier4" position="" top="" left="" bottom="" right="" ondragover="allowDrop(event)">
-                <img id="fish" src="https://cdn.mos.cms.futurecdn.net/uhLVL2jTdtQ7ScXCeoeAU6-650-80.jpg.webp" draggable="true" ondragstart="drag(event)" width="300"/>
+            <div id="emppapier4" position="" top="" left="" bottom="0" right="0" ondragover="allowDrop(event)">
+                <img id="papier5" src="View/IMG/puzzle/papier5.png" draggable="true" ondragstart="drag(event)"/>
+            </div>
+        </div>
+        <div class="ligne">
+            <div id="emppapier5" position="" top="" left="0" bottom="0" right="" ondragover="allowDrop(event)">
+                <img id="papier3" src="View/IMG/puzzle/papier3.png" draggable="true" ondragstart="drag(event)"/>
+            </div>
+            <div id="emppapier6" position="" top="" left="" bottom="0" right="0" ondragover="allowDrop(event)">
+                <img id="papier4" src="View/IMG/puzzle/papier4.png" draggable="true" ondragstart="drag(event)"/>
             </div>
         </div>
     </div>
     <div id="dropZone">
-        <div class="ligne">
-            <div id="dropBox1" puzzle="cat" class="dropBox" position="absolute" top="0" left="0" bottom="" right="" ondragover="allowDrop(event)">
+        <div class="ligne" id="puzzle1">
+            <img id="papier0" src="View/IMG/puzzle/papier0.png">
+        </div>
+        <div class="ligne" id="puzzle11">
+            <div id="dropBox1" puzzle="papier1" class="dropBox" position="absolute" top="0" left="0" bottom="" right="" ondragover="allowDrop(event)">
             </div>
-            <div id="dropBox2" puzzle="dog" class="dropBox" position="absolute" top="0" left="" bottom="" right="0" ondragover="allowDrop(event)">
+            <div id="dropBox2" puzzle="papier2" class="dropBox" position="absolute" top="0" left="" bottom="" right="0" ondragover="allowDrop(event)">
             </div>
         </div>
-        <div class="ligne">
-            <div id="dropBox3" puzzle="mouse" class="dropBox" position="absolute" top="" left="0" bottom="0" right="" ondragover="allowDrop(event)">
+        <div class="ligne" id="puzzle2">
+            <div id="dropBox3" puzzle="papier3" class="dropBox" position="absolute" top="" left="0" bottom="" right="" ondragover="allowDrop(event)">
             </div>
-            <div id="dropBox4" puzzle="fish" class="dropBox" position="absolute" top="" left="" bottom="0" right="0" ondragover="allowDrop(event)">
+            <div id="dropBox4" puzzle="papier4" class="dropBox" position="absolute" top="" left="0" bottom="" right="" ondragover="allowDrop(event)">
+            </div>
+        </div>
+        <div class="ligne" id="puzzle3">
+            <div id="dropBox5" puzzle="papier5" class="dropBox" position="absolute" top="" left="0" bottom="0" right="" ondragover="allowDrop(event)">
+            </div>
+            <div id="dropBox6" puzzle="papier6" class="dropBox" position="absolute" top="" left="" bottom="0" right="0" ondragover="allowDrop(event)">
             </div>
         </div>
     </div>
     <p style="display: none; position: fixed; top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 12;">PUZZLE TERMINE</p>
+    z-index: 12;"><img style="width: 50vw; height: 50vh" src="View/IMG/puzzle/comptederesultat.JPG" >
 </div>
 <script type="text/javascript">
     function allowDrop(event) {
@@ -102,7 +159,7 @@
             for(key in position) {
                 actual.children("img").css(key, position[key]);
             }
-            if($("#dropBox1").attr("puzzle")==$("#dropBox1").children("img").attr("id")&&$("#dropBox2").attr("puzzle")==$("#dropBox2").children("img").attr("id")&&$("#dropBox3").attr("puzzle")==$("#dropBox3").children("img").attr("id")&&$("#dropBox4").attr("puzzle")==$("#dropBox4").children("img").attr("id")){
+            if($("#dropBox1").attr("puzzle")==$("#dropBox1").children("img").attr("id")&&$("#dropBox2").attr("puzzle")==$("#dropBox2").children("img").attr("id")&&$("#dropBox3").attr("puzzle")==$("#dropBox3").children("img").attr("id")&&$("#dropBox4").attr("puzzle")==$("#dropBox4").children("img").attr("id")&&$("#dropBox5").attr("puzzle")==$("#dropBox5").children("img").attr("id")&&$("#dropBox6").attr("puzzle")==$("#dropBox6").children("img").attr("id")){
                 fini = true;
                 $("#puzzle").children("p").css("display", "block");
             }
@@ -121,16 +178,28 @@
     document.getElementById("dropBox4").ondrop = function(event){
         dropping($(this), event);
     };
-    document.getElementById("papier1").ondrop = function(event){
+    document.getElementById("dropBox5").ondrop = function(event){
         dropping($(this), event);
     };
-    document.getElementById("papier2").ondrop = function(event){
+    document.getElementById("dropBox6").ondrop = function(event){
         dropping($(this), event);
     };
-    document.getElementById("papier3").ondrop = function(event){
+    document.getElementById("emppapier1").ondrop = function(event){
         dropping($(this), event);
     };
-    document.getElementById("papier4").ondrop = function(event){
+    document.getElementById("emppapier2").ondrop = function(event){
+        dropping($(this), event);
+    };
+    document.getElementById("emppapier3").ondrop = function(event){
+        dropping($(this), event);
+    };
+    document.getElementById("emppapier4").ondrop = function(event){
+        dropping($(this), event);
+    };
+    document.getElementById("emppapier5").ondrop = function(event){
+        dropping($(this), event);
+    };
+    document.getElementById("emppapier6").ondrop = function(event){
         dropping($(this), event);
     };
 
