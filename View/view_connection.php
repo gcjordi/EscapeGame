@@ -28,8 +28,8 @@
             e.preventDefault() 
             var pass = "Banque512";
             var vpass = document.getElementById('vpass').value;
-            if( pass != vpass ) { 
-                erreur.innerHTML = "Non tout est une affaire de perte et de clef" 
+            if( pass != vpass ) {
+                erreur.innerHTML = "Non tout est une affaire de perte et de clef";
                 erreur.style.color = "#f00";
             } else {
                 mdp_find = true;

@@ -1,4 +1,4 @@
-<div class="acces" id="ordinateur" style="background: white; height: 100vh; width: 100vw; display: none">
+<div id="ordinateur" style="background: white; height: 100vh; width: 100vw; display: none">
     <?php
     $LETTRE = ["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     for ($ligne=0; $ligne<10; $ligne++):
