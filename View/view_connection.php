@@ -1,4 +1,4 @@
-<div id="connection" style="background: white; height: 100vh; width: 100vw">
+<div id="connection" style="background: white; height: 100vh; width: 100vw; display: none">
     <form method="post">
         <p> Bureau du BDE </p> <br>
         <p id="erreur" styles="color:red;" > </p> <br>
