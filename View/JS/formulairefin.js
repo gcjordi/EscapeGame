@@ -41,3 +41,4 @@ $('#valider').on('click', function(e){
     }
     
 })
+
