@@ -21,6 +21,7 @@ $SCENE = [
     'porteBDE',
     'bureauBDE',
     'ordinateur',
+    'connection',
     'toilette',
 ];
 $OBJETS = [

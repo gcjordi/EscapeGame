@@ -10,7 +10,7 @@
         <img src="View/IMG/retour.png" style="width: 5vw">
         <p>Couloir</p>
     </div>
-    <div class="acces" id="ordinateur" style="
+    <div class="acces" id="connection" style="
 position: fixed;
     width: 9vw;
     height: 12vh;
