@@ -11,6 +11,17 @@
         </p>
     </form>
 
+    <div class="acces" id="bureauBDE" style="    position: fixed;
+    z-index: 2;
+    flex-direction: column;
+    bottom: 1vh;
+    left: 2vw;
+    cursor: pointer;
+">
+        <img src="View/IMG/retour.png" style="width: 5vw">
+        <p>Bureau du BDE</p>
+    </div>
+
     <script type="text/javascript"> 
     var mdp_find = false;
     $('#valider').on('click', function(e) {
@@ -20,8 +31,10 @@
             if( pass != vpass ) { 
                 erreur.innerHTML = "Non tout est une affaire de perte et de clef" 
                 erreur.style.color = "#f00";
-            } else { 
+            } else {
                 mdp_find = true;
+                $('#container').children('#connection').css('display', 'none');
+                $('#container').children('#ordinateur').css('display', 'block');
             } 
         } )
     </script> 
