@@ -39,6 +39,15 @@
     left: 30%;
     transform: translate(30%, 0%);
     cursor: pointer;">
+    <img class="show_objet" objet="affiche_invitation" src="View/IMG/coffre.svg" style="
+        z-index: 2;
+        width: 1%;
+        position: absolute;
+        top: 46%;
+        transform: translate(5%, 0%);
+        cursor: pointer;
+        left: 51%;
+        ">
     <img class="show_objet" objet="affiche_invitation" src="View/IMG/affiche_invitation.png" style="
         z-index: 2;
     width: 5%;
