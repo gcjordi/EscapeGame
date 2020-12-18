@@ -15,10 +15,14 @@
         }
     })
 
-    $('.show_objet').on('click', function(e){
+    /*
+    Effectue le code lors d'un click sur une balise avec la classe "show_objet"
+    */
+
+    $('.show_objet').on('click', function(e){ 
         if ($(this).attr("class")=="show_objet") {
-            objet_ouvert = $(this).attr('objet');
-            $('#'+objet_ouvert).css('display', 'flex')
+            objet_ouvert = $(this).attr('objet'); //Recupère l'objet donner en attribut dans la balise
+            $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
             $('.close_objet').css('display', 'flex')
         }
         else if ($(this).attr("class")=="acces") {
