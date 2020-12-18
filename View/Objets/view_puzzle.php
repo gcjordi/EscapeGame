@@ -145,7 +145,7 @@
     <p style="display: none; position: fixed; top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 12;"><img style="width: 50vw; height: 50vh" src="View/IMG/puzzle/comptederesultat.JPG" >
+    z-index: 12;"><img style="width: 50vw; height: 50vh" src="View/IMG/puzzle/comptederesultat.JPG" id="compteResultat" objet='<?= json_encode(['id' => 'compteResultat', 'nom' => 'compte resultat', 'img' => "View/IMG/puzzle/comptederesultat.JPG"]) ?>' ondragstart="drag(event)">
 </div>
 <script type="text/javascript">
     function allowDrop(event) {

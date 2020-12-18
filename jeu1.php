@@ -10,7 +10,9 @@ $CSS = [
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
+    'View/JS/Inventaire.php',
     'View/JS/jeu1.php',
+    
 ];
 
 $LIBRAIRIES = [
@@ -43,6 +45,14 @@ if(!isset($_SESSION['user_connected'])){
         require 'View/Objets/view_'.$objet.'.php';
     endforeach; ?>
     <div class="close_objet" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none;"></div>
+
+    <div id="affichageInventaire" style="display: inline-flex; display: inline-flex;
+    z-index: 50;
+    position: fixed;
+    bottom: 7vh;
+    left: 28%;"></div>
+
+
     <div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">
         <div id="blocnote" style="display: none; width: 20vw; height: 20vh">
             <p id="titre_BN" >Bloc-notes</p>

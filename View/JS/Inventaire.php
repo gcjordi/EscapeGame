@@ -4,11 +4,12 @@
 
 		inventaire = [];
 
-		constructor(length){
+		constructor(length, div){
 			for (var i=0; i<length; i++){
 				this.inventaire["slot"+i] = null;
 			}
 			this.length = length;
+			this.div = div
 		}
 
 		saveItem(item){
@@ -61,14 +62,14 @@
 			return null;
 		}
 
-		affiche(div){
-			div.innerHTML= "";
+		affiche(){
+			this.div.innerHTML= "";
 			for(var i=0; i<this.length; i++){
 
 				if(this.inventaire["slot"+i] != null){
-					div.innerHTML += "<div id='slot"+i+"' class='slot' slot='"+i+"' ondragover='allowDrop(event)' style='border : 1px solid black; width: 40px; height: 40px;'><img id='"+this.inventaire["slot"+i].id+"' width='30' slot='"+i+"' src='"+this.inventaire["slot"+i].img+"' ondragstart='drag(event)'></div>";
+					this.div.innerHTML += "<div id='slot"+i+"' class='slot' slot='"+i+"' ondragover='allowDrop(event)' style='border : 1px solid black; background-color : white; width: 100px; height: 100px;'><img id='"+this.inventaire["slot"+i].id+"' width='80' slot='"+i+"' src='"+this.inventaire["slot"+i].img+"' ondragstart='drag(event)'></div>";
 				}else
-					div.innerHTML += "<div id='slot"+i+"' class='slot' slot='"+i+"' ondragover='allowDrop(event)' style='border : 1px solid black; width: 40px; height: 40px;'></div>";
+					this.div.innerHTML += "<div id='slot"+i+"' class='slot' slot='"+i+"' ondragover='allowDrop(event)' style='border : 1px solid black; background-color : white; width: 100px; height: 100px;'></div>";
 			}
 		}
 
@@ -89,6 +90,8 @@
 		setSlot(slot){
 			this.slotActuel = slot;
 		}
+
+		
 
 
 	}

@@ -1,7 +1,56 @@
 <script type="text/javascript">
     var objet_ouvert = "";
-    var show_inventaire = false;
+    let inventaire;
     var show_rep = false;
+
+    createInventaire();
+
+    function createInventaire(){
+        var div = document.getElementById('affichageInventaire')
+        
+        inventaire = new Inventaire(5, div);
+        inventaire.affiche()
+    }
+
+    inventaire.div.ondrop = function(event){
+        
+        var slot = $("#"+event.target.id).attr('slot')
+        droppingInv(slot, event)
+    }
+
+
+    function droppingInv(actualSlot, event){
+        var slot = actualSlot;
+        var o = event.dataTransfer.getData('text')
+
+        var oldObjet = inventaire.getItemBySlot(slot);
+
+        var objet = inventaire.getItem(o)
+        if(objet == null){
+            var json = JSON.parse($("#"+o).attr('objet'))
+            objet = new Objet(json.id, json.nom, json.img)
+
+            $("#"+objet.id).remove()
+
+            if(slot >= 0){
+                inventaire.addItem(slot, objet)
+            }else{
+                inventaire.saveItem(objet)
+            }
+
+            
+        }else{
+            inventaire.deplaceItem(slot, objet)
+        }
+
+
+        inventaire.affiche();
+
+    }
+
+
+
+
 
     $('.acces').on('click', function (e){
         var acces = true;
