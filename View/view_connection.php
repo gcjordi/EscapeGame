@@ -4,24 +4,26 @@
         <p id="erreur" styles="color:red;" > </p> <br>
         <p>
             <label for="verif_pass" id="passs">Mot de passe :</label>
-            <input type = "password" name="vpass" id="vpass" onchange="passverif()"/>
+            <input type = "password" name="vpass" id="vpass"/>
         </p>
         <p>
-            <input type="submit" />
+            <input type="submit" id="valider" />
         </p>
     </form>
 
     <script type="text/javascript"> 
-        function passverif() {
+    var mdp_find = false;
+    $('#valider').on('click', function(e) {
+            e.preventDefault() 
             var pass = "Banque512";
             var vpass = document.getElementById('vpass').value;
             if( pass != vpass ) { 
                 erreur.innerHTML = "Non tout est une affaire de perte et de clef" 
                 erreur.style.color = "#f00";
             } else { 
-                document.getElementById('passs').style.color = "#0f0"; 
+                mdp_find = true;
             } 
-        } 
+        } )
     </script> 
 
 </div>

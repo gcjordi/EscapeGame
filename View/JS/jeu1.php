@@ -7,12 +7,15 @@
         var acces = true;
         if($(this)[0]['id'] == 'bureauBDE'){
             acces = cadenas_open;
+        }else if ($(this)[0]['id'] == 'ordinateur'){
+            acces = mdp_find
         }
-
+       
         if(acces){
             $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
             $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
-        }
+        } 
+        
     })
 
     /*
