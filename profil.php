@@ -1,9 +1,10 @@
 <?php
 
 $CSS = [
-    'View/CSS/header2.css',
-    'View/CSS/styles5.css',
-    'View/CSS/profil1.css',
+  'View/CSS/header2.css',
+	'View/CSS/styles5.css',
+	'View/CSS/styles6.css',
+
 ];
 
 $JS = [
