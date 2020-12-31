@@ -34,7 +34,7 @@ $('#valider').on('click', function(e){
     var nbr=document.getElementById('nbr').value;
     if (isNaN(nbr)){
         document.getElementById("msg").innerHTML="Tout faux -> retour début";
-    }if (nbr==100){
+    }if (nbr==360){
         document.getElementById("msg").innerHTML="Bravo";
     }else{
         document.getElementById("msg").innerHTML="Faux -> retour page ou il etait avant";

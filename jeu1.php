@@ -84,7 +84,7 @@ if(!isset($_SESSION['user_connected'])){
                                 
                             </div>
                             <div id="ouioui">
-                                <p>De combien pensez-vous est le détournement (100) ?</p>
+                                <p>De combien pensez-vous est le détournement (360) ?</p>
                                 <input type="text" id="nbr">
                             </div>
                             <div>
