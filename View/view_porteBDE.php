@@ -1,4 +1,4 @@
-<div id="porteBDE" style="background: #a7a192; height: 100vh; width: 100vw; display: none">
+<div id="porteBDE" style="background-image: Url(View/IMG/fond.png); background-size: cover; height: 100vh; width: 100vw; display: none">
     <div class="acces" id="couloir" style="    position: fixed;
     z-index: 2;
     flex-direction: column;
@@ -16,7 +16,7 @@
         left: 50%;
         width: 300px;
         height: 500px;
-        background-image: Url(View/IMG/PorteBDE.png);">
+        ">
 
     </div>
 </div>
