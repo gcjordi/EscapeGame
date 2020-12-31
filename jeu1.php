@@ -88,7 +88,7 @@ if(!isset($_SESSION['user_connected'])){
                                 <input type="text" id="nbr">
                             </div>
                             <div>
-                            <input type="submit" id="valider" value="Valider">
+                            <input type="submit" id="valider" />
                             <span id="msg" style="color:red"></span>
                             </div>
                        </fieldset>

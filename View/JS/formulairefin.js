@@ -3,6 +3,7 @@ var show_Q2Non = true;
 var text =true;
 
 $('#idfondees').on('click', function(e) {
+    e.preventDefault() 
     if (show_Q2Oui) {
         $('#oui').css('display', 'inline-block');
         $('#non').css('display', 'none');
@@ -17,6 +18,7 @@ $('#idfondees').on('click', function(e) {
 
 })
 $('#idPasfondees').on('click', function(e) {
+    e.preventDefault() 
     if (show_Q2Non) {
         $('#oui').css('display', 'none');
         $('#ouioui').css('display', 'none');
