@@ -20,4 +20,12 @@ position: fixed;
     z-index: 2;
 ">
     </div>
+
+    <img class="show_objet" objet="puzzle" src="View/IMG/poubelle2.png" style="position: fixed;
+    height: 17vh;
+    width: 13vh;
+    top: 60vh;
+    left: 29vw;
+    cursor: pointer;
+    z-index: 2;">
 </div>
