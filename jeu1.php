@@ -4,9 +4,9 @@ $TITLE = "JEU 1";
 require_once 'enigmes/definitions.php';
 
 $CSS = [
-        'View/CSS/styles5.css',
+        'View/CSS/styles8.css',
         'View/CSS/definitions4.css',
-        'View/CSS/stylefin.css',
+        'View/CSS/stylefin1.css',
         'View/CSS/ordi.css'
 ];
 $JS = [
@@ -55,7 +55,7 @@ if(!isset($_SESSION['user_connected'])){
     right: 1vw;
 "></div>
     <div style="position: fixed; top: 1vh; left: 1vw; z-index: 50; flex-direction: row; display: flex">
-        <a href="index.php" style="background: white; font-weight: bold; padding: 2vh; border-radius: 2vh">
+        <a href="index.php" style="color: black; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh">
             Quitter le jeu
         </a>
         <div id="timer" style="margin-left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh;">

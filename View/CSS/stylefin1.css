@@ -3,6 +3,10 @@
     width: 600px;
     margin: 0 auto;
   }
+
+  body {
+      overflow-y: hidden;
+  }
   
   fieldset {
     background: white;
