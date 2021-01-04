@@ -54,6 +54,9 @@ if(!isset($_SESSION['user_connected'])){
     top: 1vh;
     right: 1vw;
 "></div>
+    <a href="index.php" style="position: fixed; top: 1vh; left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh; z-index: 50">
+        Quitter le jeu
+    </a>
 
 
     <div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">
