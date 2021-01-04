@@ -43,7 +43,7 @@ $('#valider').on('click', function(e){
             data: {'score' : cpt},
             type: 'post',
             success: function () {
-
+                document.location.href = "localhost/EscapeGame/classement.php"
             }
         })
     }else{

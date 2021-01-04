@@ -2,6 +2,7 @@
     var objet_ouvert = "";
     let inventaire;
     var show_rep = false;
+    var show_blocnote = false;
 
     createInventaire();
 
@@ -84,13 +85,13 @@
     })
 
     $('.show_bloc').on('click', function (e) {
-        if (show_inventaire) {
+        if (show_blocnote) {
             $('#titre_BN').css('display', 'none');
             $('#blocnote').css('display', 'none');
             $('#container_blocnote').css({'width':'6vh', 'height':'6vh'})
             $('.show_bloc').css({'width':'6vh'})
             $('#container_reponse').css('display', 'block');
-            show_inventaire = !show_inventaire;
+            show_blocnote = !show_blocnote;
         }
         else {
             $('#titre_BN').css('display', 'block');
@@ -98,7 +99,7 @@
             $('.show_bloc').css({'width':'25vw'})
             $('#blocnote').css('display', 'block');
             $('#container_reponse').css('display', 'none');
-            show_inventaire = !show_inventaire;
+            show_blocnote = !show_blocnote;
         }
     })
 
