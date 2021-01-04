@@ -54,12 +54,15 @@ if(!isset($_SESSION['user_connected'])){
     top: 1vh;
     right: 1vw;
 "></div>
-    <a href="index.php" style="position: fixed; bottom: 1vh; left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh; z-index: 50">
-        Quitter le jeu
-    </a>
-    <div id="timer" style="position: fixed; top: 1vh; left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh; z-index: 50">
-        00:00
+    <div style="position: fixed; top: 1vh; left: 1vw; z-index: 50; flex-direction: row; display: flex">
+        <a href="index.php" style="background: white; font-weight: bold; padding: 2vh; border-radius: 2vh">
+            Quitter le jeu
+        </a>
+        <div id="timer" style="margin-left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh;">
+            00:00
+        </div>
     </div>
+
 
 
     <div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">

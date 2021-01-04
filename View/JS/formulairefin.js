@@ -38,6 +38,14 @@ $('#valider').on('click', function(e){
         document.getElementById("msg").innerHTML="Tout faux -> retour début";
     }if (nbr==360){
         document.getElementById("msg").innerHTML="Bravo";
+        $.ajax({
+            url: 'View/AJAX/fin.php',
+            data: {'score' : cpt},
+            type: 'post',
+            success: function () {
+
+            }
+        })
     }else{
         document.getElementById("msg").innerHTML="Faux -> retour page ou il etait avant";
     }
