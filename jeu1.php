@@ -54,9 +54,12 @@ if(!isset($_SESSION['user_connected'])){
     top: 1vh;
     right: 1vw;
 "></div>
-    <a href="index.php" style="position: fixed; top: 1vh; left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh; z-index: 50">
+    <a href="index.php" style="position: fixed; bottom: 1vh; left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh; z-index: 50">
         Quitter le jeu
     </a>
+    <div id="timer" style="position: fixed; top: 1vh; left: 1vw; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh; z-index: 50">
+        00:00
+    </div>
 
 
     <div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">
@@ -107,6 +110,48 @@ if(!isset($_SESSION['user_connected'])){
 
     </div>
 </div>
+<script type="text/javascript">
+    var cpt = 0
+    function attente() {
+        setTimeout(function () {
+           compte()
+        }, 1000);
+    }
+
+    function compte() {
+        cpt++;
+        afficherCpt()
+    }
+
+    function afficherCpt() {
+        var minute = parseInt(cpt/60);
+        var seconde = cpt%60;
+        var affichageMinute = "";
+        var affichageSeconde = "";
+        if(minute<10) {
+            affichageMinute = '0'+minute
+        }
+        else if(minute>60) {
+            affichageMinute = '60'
+        }
+        else {
+            affichageMinute = minute
+        }
+        if(minute>60) {
+            affichageSeconde = '59'
+        }
+        else if(seconde<10) {
+            affichageSeconde = '0'+seconde
+        }
+        else {
+            affichageSeconde = seconde
+        }
+        document.getElementById('timer').innerHTML = ""+affichageMinute+":"+affichageSeconde+""
+        attente()
+    }
+
+    attente()
+</script>
 <script type="text/javascript" src="View/JS/formulairefin.js"></script>
 <?php
 require 'html_end.php';
