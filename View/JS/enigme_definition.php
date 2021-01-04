@@ -2,7 +2,8 @@
 var def = <?= json_encode($rand_defs) ?>;
 var rep = <?= json_encode($rand_reps) ?>;
 var sol = <?= json_encode($solRep) ?>;
-var cadenas_open = <?= $_SESSION['user_connected']->getAttr('role') == 'admin' ? true : false ?>; 	
+var cadenas_open = false;
+cadenas_open = <?= $_SESSION['user_connected']->getAttr('role') == 'admin' ? 'true' : 'false' ?>;
 var alpha = ['a', 'b', 'c', 'd'];
 
 for(var i = 0; i<def.length; i++){

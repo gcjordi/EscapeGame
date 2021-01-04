@@ -7,6 +7,7 @@ $CSS = [
         'View/CSS/styles5.css',
         'View/CSS/definitions4.css',
         'View/CSS/stylefin.css',
+        'View/CSS/ordi.css'
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
@@ -46,11 +47,13 @@ if(!isset($_SESSION['user_connected'])){
     endforeach; ?>
     <div class="close_objet" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none;"></div>
 
-    <div id="affichageInventaire" style="display: inline-flex; display: inline-flex;
+    <div id="affichageInventaire" style="display: flex;
+    flex-direction: column;
     z-index: 50;
     position: fixed;
-    bottom: 7vh;
-    left: 28%;"></div>
+    top: 1vh;
+    right: 1vw;
+"></div>
 
 
     <div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">
