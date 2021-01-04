@@ -1,5 +1,8 @@
 <?php
 
+$TITLE = "Profil";
+
+
 $CSS = [
   'View/CSS/header2.css',
 	'View/CSS/styles8.css',

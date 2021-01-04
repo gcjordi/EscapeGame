@@ -1,5 +1,7 @@
 <?php
 
+$TITLE = "Le Casse de la Compta";
+
     $CSS = [
         'View/CSS/header2.css',
         'View/CSS/styles8.css',
