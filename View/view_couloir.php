@@ -14,7 +14,7 @@
     left: 18vw;
     position: fixed;
     cursor: pointer;"></div>
-	<img class="show_objet" objet="affiche_bde" src="View/IMG/Votre_BDE_INFO_2.jpg" style="
+	<img class="show_objet" objet="affiche_bde" id="mini_affiche_bde" src="View/IMG/Votre_BDE_INFO_2.jpg" style="
         z-index: 2;
     width: 3%;
     position: absolute;
@@ -23,7 +23,7 @@
     transform: translate(30%, 0%);
     cursor: pointer;
     ">
-    <img class="show_objet" objet="affiche_mixte" src="View/IMG/AfficheA4Murs.png" style="
+    <img class="show_objet" objet="affiche_mixte" id="mini_affiche_mixte" src="View/IMG/AfficheA4Murs.png" style="
     z-index: 2;
     width: 3%;
     position: absolute;
@@ -31,7 +31,7 @@
     left: 30%;
     transform: translate(30%, 0%);
     cursor: pointer;">
-    <img class="show_objet" objet="affiche_lutte" src="View/IMG/affiche_lutte.png" style="
+    <img class="show_objet" objet="affiche_lutte" id="mini_affiche_lutte" src="View/IMG/affiche_lutte.png" style="
     z-index: 2;
     width: 3%;
     position: absolute;
@@ -39,7 +39,7 @@
     left: 30%;
     transform: translate(30%, 0%);
     cursor: pointer;">
-    <img class="show_objet" objet="affiche_coffre" src="View/IMG/coffre.svg" style="
+    <img class="show_objet" objet="affiche_coffre"  src="View/IMG/coffre.svg" style="
         z-index: 2;
         width: 1%;
         position: absolute;
@@ -48,7 +48,7 @@
         cursor: pointer;
         left: 51%;
         ">
-    <img class="show_objet" objet="affiche_invitation" src="View/IMG/affiche_invitation.png" style="
+    <img class="show_objet" objet="affiche_invitation" id="mini_affiche_invitation" src="View/IMG/affiche_invitation.png" style="
         z-index: 2;
     width: 5%;
     position: absolute;
@@ -56,7 +56,7 @@
     left: 75%;
     transform: translate(5%, 0%);
     cursor: pointer;">
-    <img class="show_objet" objet="affiche_sensibilisation" src="View/IMG/affiche_sensibilisation.png" style="
+    <img class="show_objet" objet="affiche_sensibilisation" id="mini_affiche_sensibilisation" src="View/IMG/affiche_sensibilisation.png" style="
         z-index: 2;
     width: 3%;
     position: absolute;

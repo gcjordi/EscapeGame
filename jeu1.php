@@ -156,12 +156,13 @@ if(!isset($_SESSION['user_connected'])){
     attente()
 
     $('#affichageInventaire').on('click', function (e) {
-        $('.slot').on('click', function (e) {
-            if(objet_ouvert==""){
-                objet_ouvert = $(this)[0].childNodes[0].id+"2"; //Recupère l'objet donner en attribut dans la balise
+        $('.itemInventaire').on('click', function (e) {
+            
+                objet_ouvert = $(this).attr("objet");
+                console.log(objet_ouvert) //Recupère l'objet donner en attribut dans la balise
                 $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
                 $('.close_objet').css('display', 'flex')
-            }
+            
         })
     })
 

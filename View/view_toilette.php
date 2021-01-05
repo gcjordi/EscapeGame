@@ -8,7 +8,7 @@
     cursor: pointer;
     z-index: 2;">
 
-    <img class="show_objet" objet="violence" src="View/IMG/violence.png" style="
+    <img class="show_objet" objet="violence" id="mini_violence" src="View/IMG/violence.png" style="
        z-index: 2;
     width: 6%;
     position: absolute;
@@ -17,7 +17,7 @@
     transform: translate(33%, 0%);
     cursor: pointer;
 ">
-    <img class="show_objet" objet="violence2" src="View/IMG/violence2.png" style="
+    <img class="show_objet" objet="violence2" id="mini_violence2" src="View/IMG/violence2.png" style="
    z-index: 2;
     width: 6%;
     position: absolute;

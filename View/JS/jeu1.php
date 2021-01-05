@@ -23,16 +23,23 @@
     function droppingInv(actualSlot, event){
         var slot = actualSlot;
         var o = event.dataTransfer.getData('text')
-
+        
         var oldObjet = inventaire.getItemBySlot(slot);
 
         var objet = inventaire.getItem(o)
         if(objet == null){
-            var json = JSON.parse($("#"+o).attr('objet'))
-            objet = new Objet(json.id, json.nom, json.img)
+          
+            var json = JSON.parse($("#"+o).attr('object'))
+            objet = new Objet(json.id, json.nom, json.img, json.open)
 
-            $("#"+objet.id).remove()
-
+            $("#"+objet.open).fadeOut()
+            if(json.remove == "mini_affiche_releve"){
+                $("#"+json.remove).attr('objet', '')
+            }else{
+                $("#"+json.remove).remove()
+            }
+            
+            $('.close_objet').css('display', 'none')
             if(slot >= 0){
                 inventaire.addItem(slot, objet)
             }else{
@@ -61,12 +68,16 @@
         $('#container').children('#'+$(this)[0]['id']).css('display', 'flex')
     })
 
+
+
     /*
     Effectue le code lors d'un click sur une balise avec la classe "show_objet"
     */
 
+
+
     $('.show_objet').on('click', function(e){ 
-        if ($(this).attr("class")=="show_objet") {
+        if ($(this).attr("class")=="show_objet" || $(this).attr("class")=="itemInventaire") {
             objet_ouvert = $(this).attr('objet'); //Recupère l'objet donner en attribut dans la balise
             $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
             $('.close_objet').css('display', 'flex')
