@@ -53,6 +53,8 @@
     $('#C9').css("background", "lightgrey");
     $('#D9').css("background", "lightgrey");
     $('#E9').css("background", "lightgrey");
+    $('#C7').css("background", "orange");
+    $('#E7').css("background", "orange");
 
     $('#B1').css("font-weight", "bold");
     $('#C1').css("font-weight", "bold");
@@ -88,7 +90,7 @@
         document.getElementById("B6").value = "Caisse";
         document.getElementById("C6").value = "50";
         document.getElementById("B7").value = "Banque";
-        document.getElementById("C7").value = "0";
+        document.getElementById("C7").value = "X";
         document.getElementById("D2").value = "Capitaux Propres";
         document.getElementById("E2").value = "1550";
         document.getElementById("D3").value = "Résultat";
@@ -97,7 +99,7 @@
         document.getElementById("D6").value = "Dettes Fournisseurs";
         document.getElementById("E6").value = "300";
         document.getElementById("D7").value = "Découvert Bancaire";
-        document.getElementById("E7").value = "180";
+        document.getElementById("E7").value = "X";
         document.getElementById("B9").value = "Total";
         calculerSomme()
     }

@@ -116,6 +116,7 @@ if(!isset($_SESSION['user_connected'])){
 <script type="text/javascript">
     var cpt = 0
     function attente() {
+
         setTimeout(function () {
            compte()
         }, 1000);
