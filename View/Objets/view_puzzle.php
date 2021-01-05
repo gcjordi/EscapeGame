@@ -148,6 +148,12 @@
     transform: translate(-50%, -50%);
     z-index: 12;"><img style="width: 50vw; height: 50vh" src="View/IMG/puzzle/comptederesultat.JPG" id="compteResultat2" object='<?= json_encode(['id' => 'compte', 'nom' => 'compte resultat', 'img' => "View/IMG/puzzle/comptederesultat.JPG", "open" => "compteResultat", "remove" => "puzzlefini"]) ?>' ondragstart="drag(event)">
 </div>
+<img src="View/IMG/inventaire/clef.png" style="position: absolute;
+    top: 59%;
+    left: 47%;
+    z-index: 2;
+    width: 2vh;
+    transform: translate(50%, 50%); display: none" class="show_objet" objet="clef" id="mini_clef">
 <script type="text/javascript">
     function allowDrop(event) {
         event.preventDefault();
@@ -156,10 +162,10 @@
         event.dataTransfer.setData("text", event.target.id);
     }
 
-    var fini = false;
+    var puzzlefini = false;
 
     function dropping(actual, event) {
-        if (!plein(actual) && !fini) {
+        if (!plein(actual) && !puzzlefini) {
             event.preventDefault();
             var data = event.dataTransfer.getData("text");
             event.target.appendChild(document.getElementById(data));
@@ -174,9 +180,11 @@
                 actual.children("img").css(key, position[key]);
             }
             if($("#dropBox1").attr("puzzle")==$("#dropBox1").children("img").attr("id")&&$("#dropBox2").attr("puzzle")==$("#dropBox2").children("img").attr("id")&&$("#dropBox3").attr("puzzle")==$("#dropBox3").children("img").attr("id")&&$("#dropBox4").attr("puzzle")==$("#dropBox4").children("img").attr("id")&&$("#dropBox5").attr("puzzle")==$("#dropBox5").children("img").attr("id")&&$("#dropBox6").attr("puzzle")==$("#dropBox6").children("img").attr("id")){
-                fini = true;
+                puzzlefini = true;
                 $('#puzzle').css('display', 'none')
                 $("#puzzlefini").css("display", "block");
+                $("#mini_clef").css("display", "block");
+                objet_ouvert = "puzzlefini"
             }
         }
     }

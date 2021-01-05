@@ -19,6 +19,19 @@
         droppingInv(slot, event)
     }
 
+    document.getElementById('affiche_coffre').ondrop = function(event){
+        var item = event.dataTransfer.getData('text')
+        if(item == "affiche_clef"){
+            inventaire.deleteItem(inventaire.getItem(item));
+            inventaire.affiche()
+            openCoffre() 
+        }
+    }
+
+    function openCoffre(){
+        $('#mini_bout_papier').css('display', 'block')
+    }
+
 
     function droppingInv(actualSlot, event){
         var slot = actualSlot;
@@ -35,8 +48,11 @@
             $("#"+objet.open).fadeOut()
             if(json.remove == "mini_affiche_releve"){
                 $("#"+json.remove).attr('objet', '')
+
             }else{
                 $("#"+json.remove).remove()
+                if(json.remove == "mini_bout_papier")
+                    $("#affiche_coffre").fadeOut()
             }
             
             $('.close_objet').css('display', 'none')
@@ -77,8 +93,14 @@
 
 
     $('.show_objet').on('click', function(e){ 
-        if ($(this).attr("class")=="show_objet" || $(this).attr("class")=="itemInventaire") {
+        if ($(this).attr("class")=="show_objet" ) {
+
             objet_ouvert = $(this).attr('objet'); //Recupère l'objet donner en attribut dans la balise
+
+            if(objet_ouvert == "puzzle" && puzzlefini){
+                objet_ouvert = "puzzlefini"
+            }
+
             $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
             $('.close_objet').css('display', 'flex')
         }

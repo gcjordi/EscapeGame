@@ -98,7 +98,7 @@
       </div>
 </div>
 
-<div id="affiche_coffre" style="display: none;">
+<div id="affiche_coffre" style="display: none;" ondragover="allowDrop(event)">
 <div style="
       position: absolute;
       top: 50%;
@@ -112,6 +112,20 @@
       width: 61vh;
       color:white;
       ">
+      </div>
+      <div id="mini_bout_papier" style="
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      padding: 12px 30px;
+      
+      width: 60vh;
+      color:white;">
+            <img style="width: 60vh; position: absolute;" src="View/IMG/bout_papier.png" id="affiche_bout_papier" object='<?= json_encode(['id' => 'affiche_bout_papier', 'nom' => 'Un bout de papier', 'img' => "View/IMG/bout_papier.png", "open" => "bout_papier", "remove"=>"mini_bout_papier"]) ?>' ondragstart="drag(event)">
       </div>
 </div>
 
@@ -159,5 +173,37 @@
       width: 60vh;
       color:white;">
             <img style="width: 60vh; position: absolute;" src="View/IMG/RelevéVrai.PNG" id="affiche8" object='<?= json_encode(['id' => 'affiche8', 'nom' => 'Affiche relevé de compte', 'img' => "View/IMG/RelevéVrai.PNG", "open" => "affiche_releve", "remove"=>"mini_affiche_releve"]) ?>' ondragstart="drag(event)">
+      </div>
+</div>
+
+<div id="clef" style="display: none;">
+      <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      padding: 12px 30px;
+      
+      width: 40vh;
+      color:white;">
+            <img style="width: 40vh; position: absolute;" src="View/IMG/inventaire/clef.png" id="affiche_clef" object='<?= json_encode(['id' => 'affiche_clef', 'nom' => 'Une clé', 'img' => "View/IMG/inventaire/clef.png", "open" => "clef", "remove"=>"mini_clef"]) ?>' ondragstart="drag(event)">
+      </div>
+</div>
+
+<div id="bout_papier" style="display: none;">
+      <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      padding: 12px 30px;
+      
+      width: 60vh;
+      color:white;">
+            <img style="width: 60vh; position: absolute;" src="View/IMG/bout_papier.png" id="affiche_bout_papier" object='<?= json_encode(['id' => 'affiche_bout_papier', 'nom' => 'Un bout de papier', 'img' => "View/IMG/bout_papier.png", "open" => "bout_papier", "remove"=>"mini_bout_papier"]) ?>' ondragstart="drag(event)">
       </div>
 </div>

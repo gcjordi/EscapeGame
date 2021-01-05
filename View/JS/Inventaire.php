@@ -27,7 +27,7 @@
 		}
 
 		deleteItem(item){
-			
+				
 				this.inventaire['slot'+item.slotActuel] = null;
 				item.slotActuel = null;
 			
