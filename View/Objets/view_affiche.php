@@ -67,6 +67,21 @@
       color:white;"></div>
 </div>
 
+<div id="compteResultat2" style="display: none;">
+    <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      height: 38%;
+      transform: translate(-50%, -50%);
+      padding: 12px 30px;
+      background-image: URL('View/IMG/puzzle/comptederesultat.JPG');
+      background-size: cover;
+      width: 60vh;
+      color:white;"></div>
+</div>
+
 <div id="affiche_invitation" style="display: none;">
       <div style="
       position: absolute;

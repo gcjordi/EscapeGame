@@ -142,7 +142,8 @@
             </div>
         </div>
     </div>
-    <p style="display: none; position: fixed; top: 50%;
+</div>
+<div id="puzzlefini" class="itemInventaire" style="display: none; position: fixed; top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 12;"><img style="width: 50vw; height: 50vh" src="View/IMG/puzzle/comptederesultat.JPG" id="compteResultat" objet='<?= json_encode(['id' => 'compteResultat', 'nom' => 'compte resultat', 'img' => "View/IMG/puzzle/comptederesultat.JPG"]) ?>' ondragstart="drag(event)">
@@ -174,7 +175,8 @@
             }
             if($("#dropBox1").attr("puzzle")==$("#dropBox1").children("img").attr("id")&&$("#dropBox2").attr("puzzle")==$("#dropBox2").children("img").attr("id")&&$("#dropBox3").attr("puzzle")==$("#dropBox3").children("img").attr("id")&&$("#dropBox4").attr("puzzle")==$("#dropBox4").children("img").attr("id")&&$("#dropBox5").attr("puzzle")==$("#dropBox5").children("img").attr("id")&&$("#dropBox6").attr("puzzle")==$("#dropBox6").children("img").attr("id")){
                 fini = true;
-                $("#puzzle").children("p").css("display", "block");
+                $('#puzzle').css('display', 'none')
+                $("#puzzlefini").css("display", "block");
             }
         }
     }
