@@ -58,7 +58,7 @@
         console.log('Ouvre:#'+$(this)[0]['id'])
         console.log($(this))
         $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
-        $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+        $('#container').children('#'+$(this)[0]['id']).css('display', 'flex')
     })
 
     /*
