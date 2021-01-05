@@ -1,7 +1,11 @@
+
+
+
 <div id="connection" style="background: white; height: 100vh; width: 100vw; display: none">
-    <form method="post">
-        <p> Bureau du BDE </p> <br>
-        <p id="erreur" styles="color:red;" > </p> <br>
+    <img class="fond" src="View/IMG/windows.jpg">
+    <form method="post" style="z-index: 30; display: flex; flex-direction: column; justify-content: center; align-items: center">
+        <p> Bureau du BDE </p>
+        <p id="erreur" styles="color:red;" > </p>
         <p>
             <label for="verif_pass" id="passs">Mot de passe :</label>
             <input type = "password" name="vpass" id="vpass"/>
@@ -34,7 +38,7 @@
             } else {
                 mdp_find = true;
                 $('#container').children('#connection').css('display', 'none');
-                $('#container').children('#ordinateur').css('display', 'block');
+                $('#container').children('#bureauOrdi').css('display', 'block');
             } 
         } )
     </script> 

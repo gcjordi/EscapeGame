@@ -1,4 +1,4 @@
-<div id="ordinateur" style="background: white; flex-direction: column; height: 100vh; width: 100vw; display: none">
+<div id="ordinateur" style="background: white; flex-direction: column; height: 100vh; width: 100vw; display: flex">
     <?php
     $LETTRE = ["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     for ($ligne=0; $ligne<10; $ligne++):
@@ -31,7 +31,7 @@
     <?php
         endfor;
     ?>
-    <div class="acces" id="bureauBDE" style="    position: fixed;
+    <div class="acces" id="bureauOrdi" style="    position: fixed;
     z-index: 2;
     flex-direction: column;
     bottom: 1vh;
@@ -39,7 +39,7 @@
     cursor: pointer;
 ">
         <img src="View/IMG/retour.png" style="width: 5vw">
-        <p>Bureau du BDE</p>
+        <p>Bureau Ordinateur</p>
     </div>
 
 </div>
@@ -49,10 +49,10 @@
     $('#C1').css("background", "lightblue");
     $('#D1').css("background", "lightblue");
     $('#E1').css("background", "lightblue");
-    $('#B8').css("background", "lightgrey");
-    $('#C8').css("background", "lightgrey");
-    $('#D8').css("background", "lightgrey");
-    $('#E8').css("background", "lightgrey");
+    $('#B9').css("background", "lightgrey");
+    $('#C9').css("background", "lightgrey");
+    $('#D9').css("background", "lightgrey");
+    $('#E9').css("background", "lightgrey");
 
     $('#B1').css("font-weight", "bold");
     $('#C1').css("font-weight", "bold");
@@ -64,19 +64,17 @@
     $('#B6').css("font-weight", "bold");
     $('#B7').css("font-weight", "bold");
     $('#B8').css("font-weight", "bold");
-    $('#C8').css("font-weight", "bold");
     $('#D8').css("font-weight", "bold");
-    $('#E8').css("font-weight", "bold");
     $('#D7').css("font-weight", "bold");
     $('#D6').css("font-weight", "bold");
     $('#D5').css("font-weight", "bold");
     $('#D4').css("font-weight", "bold");
     $('#D3').css("font-weight", "bold");
     $('#D2').css("font-weight", "bold");
-    $('#D7').css("font-weight", "bold");
-    $('#D7').css("font-weight", "bold");
-    $('#D7').css("font-weight", "bold");
-
+    $('#D9').css("font-weight", "bold");
+    $('#E9').css("font-weight", "bold");
+    $('#C9').css("font-weight", "bold");
+    $('#B9').css("font-weight", "bold");
 
     function init() {
         $('#init').css('background', '#e8eaed')
@@ -85,26 +83,30 @@
         document.getElementById("B2").value = "Actif Immobilisé";
         document.getElementById("C2").value = "1500";
         document.getElementById("B4").value = "Actif Circulant";
-        document.getElementById("B5").value = "Caisse";
-        document.getElementById("C5").value = "50";
-        document.getElementById("B6").value = "Banque";
-        document.getElementById("C6").value = "70";
+        document.getElementById("B5").value = "Créances";
+        document.getElementById("C5").value = "200";
+        document.getElementById("B6").value = "Caisse";
+        document.getElementById("C6").value = "50";
+        document.getElementById("B7").value = "Banque";
+        document.getElementById("C7").value = "0";
         document.getElementById("D2").value = "Capitaux Propres";
         document.getElementById("E2").value = "1550";
-        document.getElementById("D4").value = "Résultat";
-        document.getElementById("E4").value = "-230";
-        document.getElementById("D5").value = "Dettes Fournisseurs";
-        document.getElementById("E5").value = "300";
-        document.getElementById("D6").value = "Découvert Bancaire";
-        document.getElementById("E6").value = "0";
-        document.getElementById("B8").value = "Total";
+        document.getElementById("D3").value = "Résultat";
+        document.getElementById("E3").value = "80";
+        document.getElementById("D5").value = "Passif Circulant";
+        document.getElementById("D6").value = "Dettes Fournisseurs";
+        document.getElementById("E6").value = "300";
+        document.getElementById("D7").value = "Découvert Bancaire";
+        document.getElementById("E7").value = "180";
+        document.getElementById("B9").value = "Total";
+        calculerSomme()
     }
 
     function calculerSomme(){
         var somme1 = 0;
         var somme2 = 0;
         var lettre=["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-        for (var ligne=1; ligne<7; ligne++) {
+        for (var ligne=1; ligne<8; ligne++) {
             if (!isNaN(parseInt(document.getElementById(""+lettre[3]+ligne+"").value))){
                 somme1 += parseInt(document.getElementById(""+lettre[3]+ligne+"").value);
             }
@@ -112,8 +114,8 @@
                 somme2 += parseInt(document.getElementById(""+lettre[5]+ligne+"").value);
             }
         }
-        document.getElementById('C8').value = somme1
-        document.getElementById('E8').value = somme2
+        document.getElementById('C9').value = somme1
+        document.getElementById('E9').value = somme2
     }
 
     function verif() {
@@ -138,7 +140,6 @@
             document.getElementById('F9').value == "" &&
             document.getElementById('G1').value == "" &&
             document.getElementById('G2').value == "" &&
-            document.getElementById('G3').value == "" &&
             document.getElementById('G4').value == "" &&
             document.getElementById('G5').value == "" &&
             document.getElementById('G6').value == "" &&
@@ -173,35 +174,35 @@
             document.getElementById('E2').value == "1550" &&
             document.getElementById('B3').value == "" &&
             document.getElementById('C3').value == "" &&
-            document.getElementById('D3').value == "" &&
-            document.getElementById('E3').value == "" &&
+            document.getElementById('D3').value == "Résultat" &&
+            document.getElementById('E3').value == "80" &&
             document.getElementById('B4').value == "Actif Circulant" &&
             document.getElementById('C4').value == "" &&
-            document.getElementById('D4').value == "Résultat" &&
-            document.getElementById('E4').value == "-230" &&
-            document.getElementById('B5').value == "Caisse" &&
-            document.getElementById('C5').value == "50" &&
-            document.getElementById('D5').value == "Dettes Fournisseurs" &&
-            document.getElementById('E5').value == "300" &&
-            document.getElementById('B6').value == "Banque" &&
-            document.getElementById('C6').value == "0" &&
-            document.getElementById('D6').value == "Découvert Bancaire" &&
-            document.getElementById('E6').value == "180" &&
-            document.getElementById('B7').value == "" &&
-            document.getElementById('C7').value == "" &&
-            document.getElementById('D7').value == "" &&
-            document.getElementById('E7').value == "" &&
-            document.getElementById('B8').value == "Total" &&
-            document.getElementById('C8').value == "1550" &&
+            document.getElementById('D4').value == "" &&
+            document.getElementById('E4').value == "" &&
+            document.getElementById('B5').value == "Créances" &&
+            document.getElementById('C5').value == "200" &&
+            document.getElementById('D5').value == "Passif Circulant" &&
+            document.getElementById('E5').value == "" &&
+            document.getElementById('B6').value == "Caisse" &&
+            document.getElementById('C6').value == "50" &&
+            document.getElementById('D6').value == "Dettes Fournisseurs" &&
+            document.getElementById('E6').value == "300" &&
+            document.getElementById('B7').value == "Banque" &&
+            document.getElementById('C7').value == "180" &&
+            document.getElementById('D7').value == "Découvert Bancaire" &&
+            document.getElementById('E7').value == "0" &&
+            document.getElementById('B8').value == "" &&
+            document.getElementById('C8').value == "" &&
             document.getElementById('D8').value == "" &&
-            document.getElementById('E8').value == "1800" &&
-            document.getElementById('B9').value == "" &&
-            document.getElementById('C9').value == "" &&
+            document.getElementById('E8').value == "" &&
+            document.getElementById('B9').value == "Total" &&
+            document.getElementById('C9').value == "1930" &&
             document.getElementById('D9').value == "" &&
-            document.getElementById('E9').value == ""
+            document.getElementById('E9').value == "1930"
         ){
-            $('#C6').css('background', 'lightgreen');
-            $('#E6').css('background', 'lightgreen');
+            $('#C7').css('background', 'lightgreen');
+            $('#E7').css('background', 'lightgreen');
             document.querySelectorAll('input').forEach((inp) => {
                 inp.setAttribute('disabled', 'disabled')
             })
@@ -212,12 +213,12 @@
     }
 
     $('input').on('keyup', function (e){
+        console.log($(this)[0].id)
         calculerSomme()
         verif()
     })
 
     init()
-    calculerSomme()
 
     $('#init').on('click', function (e) {
         var lettre= ["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
@@ -226,6 +227,8 @@
                 document.getElementById(""+lettre[colonne]+ligne+"").value = "";
             }
         }
+        document.getElementById("G3").value = "Aide: Ceci est un relevé bancaire fraudé";
+        $('#G3').css('font-weight', 'bold')
         init()
     })
 </script>

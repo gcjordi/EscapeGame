@@ -7,7 +7,6 @@ $CSS = [
         'View/CSS/styles8.css',
         'View/CSS/definitions4.css',
         'View/CSS/stylefin1.css',
-        'View/CSS/ordi.css'
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
@@ -26,6 +25,7 @@ $SCENE = [
     'ordinateur',
     'connection',
     'toilette',
+    'bureauOrdi',
 ];
 $OBJETS = [
 	'affiche',
@@ -54,7 +54,7 @@ if(!isset($_SESSION['user_connected'])){
     top: 1vh;
     right: 1vw;
 "></div>
-    <div style="position: fixed; top: 1vh; left: 1vw; z-index: 50; flex-direction: row; display: flex">
+    <div style="position: fixed; top: 1vh; left: 15vw; z-index: 50; flex-direction: row; display: flex">
         <a href="index.php" style="color: black; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh">
             Quitter le jeu
         </a>
