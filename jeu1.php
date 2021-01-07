@@ -7,6 +7,7 @@ $CSS = [
         'View/CSS/styles8.css',
         'View/CSS/definitions4.css',
         'View/CSS/stylefin1.css',
+        'View/CSS/chargement1.css'
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
@@ -37,6 +38,9 @@ require 'html_start.php';
 if(!isset($_SESSION['user_connected'])){
     header("Location:connexion.php"); //ne pas mettre d'espace avant les ":"
 }
+
+
+require 'View/view_chargement.php';
 ?>
 <div id="container" style="background: #64fa7f; width: 100%; height: 100%">
     <?php foreach ($SCENE as $scene):
@@ -115,6 +119,7 @@ if(!isset($_SESSION['user_connected'])){
 </div>
 <script type="text/javascript">
     var cpt = 0
+    var finiChargement = false;
     function attente() {
         setTimeout(function () {
            compte()
@@ -153,7 +158,69 @@ if(!isset($_SESSION['user_connected'])){
         attente()
     }
 
-    attente()
+    initChargement()
+
+    function initChargement(){
+         
+
+         chargement(0);
+         textChargement(1)
+         phraseChargement()
+    }
+
+    function phraseChargement(){
+        var phrases = { //Si vous voulez rajoutez des phrases vous pouvez ;)
+            0 : "Création des fonctions de comptabilité",
+            1 : "Vérification des données utilisateur",
+            2 : "Vérification anti-cheats",
+            3 : "La compta c'est bon pour le moral"
+         }
+
+         var numero = Math.floor(Math.random() * Object.keys(phrases).length)
+         
+         $("#phrase_rigolote_chargement").text(phrases[numero])
+         if(!finiChargement)
+            setTimeout(() => phraseChargement(), 800)
+    }
+
+    function textChargement(dot){
+        if(dot == 1){
+            $("#titre_chargement").text("Chargement.")
+            dot++;
+        }else if(dot == 2){
+            $("#titre_chargement").text("Chargement..")
+            dot++;
+        }else if(dot == 3){
+            $("#titre_chargement").text("Chargement...")
+            dot = 1
+        }
+        if(!finiChargement)
+            setTimeout(() => textChargement(dot), 800)
+    }
+
+    function chargement(percent){
+        $("#barre_en_cours").css("width", percent+"%");
+        $("#percentage_chargement").text(Math.floor(percent)+"%");
+
+        
+        if(percent < 100){
+            var new_percent = percent+Math.random() * (15 - 5) + 5;
+            if(new_percent > 100)
+                setTimeout(() => chargement(100), 800);
+            else
+                setTimeout(() => chargement(new_percent), 800);
+        }else{
+            finiChargement = true;
+            $('#chargement').fadeOut('slow')
+            setTimeout(() => {
+                $('#chargement').remove()
+                attente()
+            }, 1000)
+            
+        }
+    }
+
+    
 
     $('#affichageInventaire').on('click', function (e) {
         $('.itemInventaire').on('click', function (e) {
