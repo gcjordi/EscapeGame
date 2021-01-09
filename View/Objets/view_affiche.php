@@ -52,6 +52,22 @@
       </div>
 </div>
 
+<div id="journal_um" style="display: none;">
+      <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      padding: 12px 30px;
+           
+      width: 60vh;
+      color:white;">
+            <img style="width: 60vh; position: absolute;" src="View/IMG/journal.png" id="affiche5" object='<?= json_encode(['id' => 'affiche5', 'nom' => 'journal', 'img' => "View/IMG/journal.png", "open" => "journal_um", "remove"=>"mini_journal_um"]) ?>' ondragstart="drag(event)">
+      </div>
+</div>
+
 <div id="affiche_sensibilisation" style="display: none;">
       <div style="
       position: absolute;

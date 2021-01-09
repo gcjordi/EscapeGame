@@ -14,7 +14,17 @@
     left: 18vw;
     position: fixed;
     cursor: pointer;"></div>
-	<img class="show_objet" objet="affiche_bde" id="mini_affiche_bde" src="View/IMG/Votre_BDE_INFO_2.jpg" style="
+	<div class="show_objet" objet="journal_um" id="mini_journal_um" style="
+    height: 14vh;
+    z-index: 2;
+    width: 3vw;
+    top: 49vh;
+    left: 39vw;
+    position: fixed;
+    cursor: pointer;
+    ">
+</div>
+    <img class="show_objet" objet="affiche_bde" id="mini_affiche_bde" src="View/IMG/Votre_BDE_INFO_2.jpg" style="
         z-index: 2;
     width: 3%;
     position: absolute;
