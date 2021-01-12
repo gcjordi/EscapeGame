@@ -1,7 +1,6 @@
 <script type="text/javascript">
 	
 	class Inventaire{
-
 		inventaire = [];
 
 		constructor(length, div){
@@ -11,7 +10,6 @@
 			this.length = length;
 			this.div = div
 		}
-
 		saveItem(item){
 			for(var i=0; i<this.length; i++){
 				if(this.inventaire["slot"+i] == null)
@@ -19,21 +17,17 @@
 				return true;
 			}
 		}
-
-
 		addItem(slot, item){
 
 			this.inventaire["slot"+slot] = item;
 			item.setSlot(slot)
 		}
-
 		deleteItem(item){
 				
 				this.inventaire['slot'+item.slotActuel] = null;
 				item.slotActuel = null;
 			
 		}
-
 		deplaceItem(slot, item){
 			var newSlot = parseInt(slot);
 			var oldItem;
@@ -59,9 +53,7 @@
 				}
 			return b;
 		}
-
 		getItem(id){
-						
 			for(var i=0; i<this.length; i++){
 
 				if(this.inventaire["slot"+i] != null && this.inventaire["slot"+i].id == id)
@@ -69,7 +61,6 @@
 			}
 			return null;
 		}
-
 		affiche(){
 			this.div.innerHTML= "";
 			for(var i=0; i<this.length; i++){
@@ -87,12 +78,10 @@
 					this.div.innerHTML += "<div id='slot"+i+"' class='slot' slot='"+i+"' ondragover='allowDrop(event)'></div>";
 			}
 		}
-
 		getItemBySlot(slot){
 			return this.inventaire['slot'+slot];
 		}
 	}
-
 
 	class Objet{
 		constructor(id, nom, img, open){
@@ -102,7 +91,6 @@
 			this.open = open;
 			this.slotActuel = null;
 		}
-
 		setSlot(slot){
 			this.slotActuel = slot;
 		}

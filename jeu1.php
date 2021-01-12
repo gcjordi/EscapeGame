@@ -21,6 +21,7 @@ $LIBRAIRIES = [
         'Librairies/jquery-3.5.1.min.js',
 ];
 $SCENE = [
+        'debut',
     'couloir',
     'porteBDE',
     'bureauBDE',
@@ -214,7 +215,7 @@ require 'View/view_chargement.php';
             $('#chargement').fadeOut('slow')
             setTimeout(() => {
                 $('#chargement').remove()
-                attente()
+                scenarioDebut()
             }, 1000)
             
         }

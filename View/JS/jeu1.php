@@ -96,9 +96,6 @@
 
 
     $('.acces').on('click', function (e){
-        console.log('Ferme:#'+$(this)[0]['parentElement']['id'])
-        console.log('Ouvre:#'+$(this)[0]['id'])
-        console.log($(this))
         $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
         $('#container').children('#'+$(this)[0]['id']).css('display', 'flex')
     })
@@ -164,11 +161,6 @@
             $('#reponse').css('display', 'block');
             show_rep = !show_rep;
         }
-    })
-
-    $('#bureauBDE').on('click', function (e) {
-        console.log($(this).attr('class'))
-
     })
 
 </script>

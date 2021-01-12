@@ -183,7 +183,6 @@
             }
         }
     }
-
     document.getElementById("dropBox1").ondrop = function(event){
         dropping($(this), event);
     };
@@ -220,7 +219,6 @@
     document.getElementById("emppapier6").ondrop = function(event){
         dropping($(this), event);
     };
-
     function plein(actual) {
         return actual.children("img").length!==0;
     }

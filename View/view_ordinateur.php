@@ -6,8 +6,6 @@
     <div id="ligne" style="display: flex; flex-direction: row; height: 10vh; width: 100vw">
     <?php
     for ($colonne=0; $colonne<10; $colonne++):
-    ?>
-        <?php
         if ($colonne==0 && $ligne==0) :
             ?>
             <p id="init" colonne="<?=$colonne?>" ligne="<?=$ligne?>" lettre="<?=$LETTRE[$colonne]?>" style="background: #e8eaed; min-width: 9.99vw; width: 9.99vw !important; justify-content: center; display: flex; flex-direction: row; align-items: center;word-wrap:break-word; margin: 0; padding: 0; border: solid black 0.01vh; border-right-width: 0.01vw ;  border-left: none; border-top: none; cursor: pointer">Réinitialiser</p>
