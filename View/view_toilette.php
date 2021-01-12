@@ -36,4 +36,10 @@
         <img src="View/IMG/retour.png" style="width: 5vw">
         <p>Couloir</p>
     </div>
+    <img src="View/IMG/inventaire/clef.png" style="position: absolute;
+    top: 59%;
+    left: 47%;
+    z-index: 2;
+    width: 2vh;
+    transform: translate(50%, 50%); display: none" class="show_objet" objet="clef" id="mini_clef">
 </div>

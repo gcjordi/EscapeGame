@@ -148,12 +148,7 @@
     transform: translate(-50%, -50%);
     z-index: 12;"><img style="width: 50vw; height: 50vh" src="View/IMG/puzzle/comptederesultat.JPG" id="compteResultat2" object='<?= json_encode(['id' => 'compte', 'nom' => 'compte resultat', 'img' => "View/IMG/puzzle/comptederesultat.JPG", "open" => "compteResultat", "remove" => "puzzlefini"]) ?>' ondragstart="drag(event)">
 </div>
-<img src="View/IMG/inventaire/clef.png" style="position: absolute;
-    top: 59%;
-    left: 47%;
-    z-index: 2;
-    width: 2vh;
-    transform: translate(50%, 50%); display: none" class="show_objet" objet="clef" id="mini_clef">
+
 <script type="text/javascript">
     function allowDrop(event) {
         event.preventDefault();
