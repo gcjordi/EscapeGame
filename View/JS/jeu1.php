@@ -221,11 +221,12 @@
         if(nbr==1750){
             $.ajax({
                 url: 'View/AJAX/fin.php',
+                
                 data: {'score' : cpt},
                 type: 'post',
                 success: function () {
-                    document.location.href = "classement.php"
                     alert('Bravo vous avez réussi a déjouer les plans machiavéliques du vilain BDE')
+                    document.location.href = "classement.php"  
                 }
                 }
             )

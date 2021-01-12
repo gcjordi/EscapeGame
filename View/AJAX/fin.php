@@ -6,15 +6,14 @@ require_once '../../Model/Classement.php';
 
 session_start();
 
-var_dump($_POST['score']);
 
 if(isset($_POST['score'])){
 	if(isset($_SESSION['user_connected'])){
 		if($_SESSION['user_connected']->getAttr('temps') == NULL){
-			Classement::insertClassement($_GET['score']);
+			Classement::insertClassement($_POST['score']);
 
 		}else{
-			Classement::updateClassement($_GET['score']);
+			Classement::updateClassement($_POST['score']);
 
 		}
 	}
