@@ -6,7 +6,7 @@ require_once '../../Model/Classement.php';
 
 session_start();
 
-
+var_dump($_POST['score']);
 
 if(isset($_POST['score'])){
 	if(isset($_SESSION['user_connected'])){
