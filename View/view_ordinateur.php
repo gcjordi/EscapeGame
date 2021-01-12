@@ -42,7 +42,7 @@
 
 </div>
 <script type="text/javascript">
-    var excelfini = true;
+    var excelfini = false;
 
     $('#B1').css("background", "lightblue");
     $('#C1').css("background", "lightblue");
