@@ -162,7 +162,7 @@ require 'View/view_chargement.php';
     function initChargement(){
          
 
-         chargement(100);
+         chargement(0);
          textChargement(1)
          phraseChargement()
     }
