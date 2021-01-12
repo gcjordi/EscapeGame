@@ -123,6 +123,7 @@ require 'View/view_chargement.php';
             echo 0;
         }
     ?>;
+    <?php $_SESSION['timer']=0; ?>
     var finiChargement = false;
     function attente() {
 
@@ -134,7 +135,9 @@ require 'View/view_chargement.php';
     function compte() {
         cpt++;
         afficherCpt()
+        attente()
     }
+    afficherCpt()
 
     function afficherCpt() {
         var minute = parseInt(cpt/60);
@@ -160,7 +163,6 @@ require 'View/view_chargement.php';
             affichageSeconde = seconde
         }
         document.getElementById('timer').innerHTML = ""+affichageMinute+":"+affichageSeconde+""
-        attente()
     }
 
     initChargement()

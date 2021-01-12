@@ -42,6 +42,7 @@
 
 </div>
 <script type="text/javascript">
+    var excelfini = true;
 
     $('#B1').css("background", "lightblue");
     $('#C1').css("background", "lightblue");
@@ -209,8 +210,9 @@
             document.querySelectorAll('input').forEach((inp) => {
                 inp.setAttribute('disabled', 'disabled')
             })
+            excelfini = true;
         }
-        else if(document.getElementById('E6').value == "180" && document.getElementById('C6').value == "0") {
+        else {
             $('#init').css('background', 'pink');
         }
     }
