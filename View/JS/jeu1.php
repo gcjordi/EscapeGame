@@ -221,7 +221,7 @@
         if(nbr==1750){
             $.ajax({
                 url: 'View/AJAX/fin.php',
-                data: cpt,
+                data: {'score' : cpt},
                 type: 'post',
                 success: function () {
                     document.location.href = "classement.php"
