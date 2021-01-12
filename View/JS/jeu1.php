@@ -39,7 +39,7 @@
         var item = event.dataTransfer.getData('text')
         item = inventaire.getItem(item)
         if(item != null){
-            var confirmDelete = confirm("Etes vous sur de vouloir supprimer cet objet ? Cette action est irréversible !")
+            var confirmDelete = confirm("Etes vous sur de vouloir supprimer '"+item.nom+"' ? Cette action est irréversible !")
             if(confirmDelete){
                 inventaire.deleteItem(item);
                 inventaire.affiche()
