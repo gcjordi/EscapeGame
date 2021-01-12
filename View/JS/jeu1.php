@@ -200,8 +200,8 @@
 
     $('#pasFondeesEtSur').on('click', function () {
         $.ajax({
-                url: 'View/AJAX/fin.php',
-                data: cpt,
+                url: 'View/AJAX/time.php',
+                data: {'time' : cpt},
                 type: 'post',
                 success: function () {
                     document.location.href = "jeu1.php"
@@ -219,16 +219,21 @@
     $('.final>h4').on('click', function () {
         var nbr = $('#nbr').val();
         if(nbr==1750){
-            $.ajax({
-                url: 'View/AJAX/fin.php',
-                data: {'score' : cpt},
-                type: 'post',
-                success: function () {
-                    document.location.href = "classement.php"
-                    alert('Bravo vous avez réussi a déjouer les plans machiavéliques du vilain BDE')
-                }
-                }
-            )
+            if(excelfini){
+                $.ajax({
+                        url: 'View/AJAX/fin.php',
+                        data: {'score' : cpt},
+                        type: 'post',
+                        success: function () {
+                            document.location.href = "classement.php"
+                            alert('Bravo vous avez réussi a déjouer les plans machiavéliques du vilain BDE')
+                        }
+                    }
+                )
+            }
+            else {
+                alert("Wopopop... Ne va pas trop vite... Tu ne crois quand même pas t'en sortir aussi rapidement ;)")
+            }
         }
         else {
             alert('Vous y êtes presque, mettez tous les documents comptables en lien dans le bilan :)')

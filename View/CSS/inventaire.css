@@ -4,7 +4,7 @@
     z-index: 50;
     position: fixed;
     top: 1vh;
-    right: 1vw;
+    right: 1vh;
 }
 
 #poubelle{
@@ -12,9 +12,10 @@
     flex-direction: column;
     z-index: 51;
     position: fixed;
-    top: 1vh;
-    right: 13vw;
-    width: 120px;
+    top: 0;
+    right: 17vh;
+    width: 15vh;
+    height: 15vh;
 }
 
 
