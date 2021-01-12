@@ -1,5 +1,5 @@
-<div  id="scenarioDebut" style="align-items: center; justify-content: center; background: black; height: 100vh; width: 100vw; display: flex; cursor: pointer">
-    <p id="scenario1" style="color: white; max-width: 50vw"></p>
+<div  id="scenarioDebut" style="z-index: 10000000; align-items: center; justify-content: center; background: black; height: 100vh; width: 100vw; display: flex; cursor: pointer">
+    <h3 id="scenario1" style="color: white; max-width: 50vw;"></h3>
 </div>
 <script type="text/javascript">
     var phrase = "Jeune informaticien, l'heure est grave ! Alors que tout revient à la normale après des mois de confinement, le chef du département informatique s'inquiète sur la santé financière du Bureau des Etudiants (BDE) Informatique. Vous êtes amenés à vérifier si ces inquiétudes sont fondées ou non. N'attendez plus et plongez dans l'univers de la comptabilité du BDE pour vérifier les choses louches...";

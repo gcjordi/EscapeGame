@@ -15,7 +15,7 @@
 
         <div id="mini-releve" style="display: flex; flex-direction: column; justify-content: center; align-items: center">
             <img src="View/IMG/releveFaux.png" style="width: 10vh; height: 10vh">
-            <p>Relevé Bancaire BDE</p>
+            <p>Relevé Bancaire BDE Fraudé</p>
         </div>
     </div>
 

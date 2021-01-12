@@ -3,6 +3,7 @@
     let inventaire;
     var show_rep = false;
     var show_blocnote = false;
+    var show_form = false;
 
     createInventaire();
 
@@ -149,6 +150,89 @@
             $('#blocnote').css('display', 'block');
             $('#container_reponse').css('display', 'none');
             show_blocnote = !show_blocnote;
+        }
+    })
+
+    function fermerFormulaire() {
+        $('.first').css('display', 'block');
+        $('.second').css('display', 'none');
+        $('.third').css('display', 'none');
+        $('.final').css('display', 'none');
+        $('#FF').css('display', 'none');
+        $('#titre_FF').css('display', 'none');
+        $('#container_formulairefinal').css({'width':'6vh', 'height':'6vh'})
+        $('.show_formulairefinal').css({'width':'6vh'})
+        show_form = !show_form;
+    }
+
+    $('.show_formulairefinal').on('click', function (e) {
+        if (show_form) {
+            fermerFormulaire()
+        }
+        else {
+            $('#titre_FF').css('display', 'block');
+            $('#container_formulairefinal').css({'width':'25vw', 'height':'35vh'})
+            $('.show_formulairefinal').css({'width':'25vw'})
+            $('#FF').css('display', 'block');
+            show_form = !show_form;
+        }
+    })
+
+    $('#idfondees').on('click', function () {
+        $('.first').css('display', 'none');
+        $('.second').css('display', 'block');
+    })
+
+    $('#idPasfondees').on('click', function () {
+        $('.first').css('display', 'none');
+        $('.third').css('display', 'block');
+    })
+
+    $('#fondeesPasDeDetournement').on('click', function () {
+        alert('Vous ne trouvez pas que certaines choses sont louches ? Allez courage ;)')
+        fermerFormulaire()
+    })
+
+    $('#fondeesEtDetournement').on('click', function () {
+        $('.second').css('display', 'none')
+        $('.final').css('display', 'block')
+    })
+
+    $('#pasFondeesEtSur').on('click', function () {
+        $.ajax({
+                url: 'View/AJAX/fin.php',
+                data: cpt,
+                type: 'post',
+                success: function () {
+                    document.location.href = "jeu1.php"
+                    alert('Toujours réviser la comptabilité')
+                }
+            }
+        )
+    })
+
+    $('#pasFondeesEtPasSur').on('click', function () {
+        alert('Certaines choses semblent tout de même louches... Courage !')
+        fermerFormulaire()
+    })
+
+    $('.final>h4').on('click', function () {
+        var nbr = $('#nbr').val();
+        if(nbr==1750){
+            $.ajax({
+                url: 'View/AJAX/fin.php',
+                data: cpt,
+                type: 'post',
+                success: function () {
+                    document.location.href = "classement.php"
+                    alert('Bravo vous avez réussi a déjouer les plans machiavéliques du vilain BDE')
+                }
+                }
+            )
+        }
+        else {
+            alert('Vous y êtes presque, mettez tous les documents comptables en lien dans le bilan :)')
+            fermerFormulaire()
         }
     })
 

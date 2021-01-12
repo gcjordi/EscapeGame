@@ -53,6 +53,8 @@
     $('#E9').css("background", "lightgrey");
     $('#C7').css("background", "orange");
     $('#E7').css("background", "orange");
+    $('#E2').css("background", "orange");
+    $('#E3').css("background", "orange");
 
     $('#B1').css("font-weight", "bold");
     $('#C1').css("font-weight", "bold");
@@ -88,7 +90,7 @@
         document.getElementById("B6").value = "Caisse";
         document.getElementById("C6").value = "50";
         document.getElementById("B7").value = "Banque";
-        document.getElementById("C7").value = "X";
+        document.getElementById("C7").value = "180";
         document.getElementById("D2").value = "Capitaux Propres";
         document.getElementById("E2").value = "1550";
         document.getElementById("D3").value = "Résultat";
@@ -97,7 +99,7 @@
         document.getElementById("D6").value = "Dettes Fournisseurs";
         document.getElementById("E6").value = "300";
         document.getElementById("D7").value = "Découvert Bancaire";
-        document.getElementById("E7").value = "X";
+        document.getElementById("E7").value = "0";
         document.getElementById("B9").value = "Total";
         calculerSomme()
     }
@@ -140,7 +142,6 @@
             document.getElementById('F9').value == "" &&
             document.getElementById('G1').value == "" &&
             document.getElementById('G2').value == "" &&
-            document.getElementById('G4').value == "" &&
             document.getElementById('G5').value == "" &&
             document.getElementById('G6').value == "" &&
             document.getElementById('G7').value == "" &&
@@ -171,11 +172,11 @@
             document.getElementById('B2').value == "Actif Immobilisé" &&
             document.getElementById('C2').value == "1500" &&
             document.getElementById('D2').value == "Capitaux Propres" &&
-            document.getElementById('E2').value == "1550" &&
+            document.getElementById('E2').value == "1500" &&
             document.getElementById('B3').value == "" &&
             document.getElementById('C3').value == "" &&
             document.getElementById('D3').value == "Résultat" &&
-            document.getElementById('E3').value == "80" &&
+            document.getElementById('E3').value == "-230" &&
             document.getElementById('B4').value == "Actif Circulant" &&
             document.getElementById('C4').value == "" &&
             document.getElementById('D4').value == "" &&
@@ -189,20 +190,22 @@
             document.getElementById('D6').value == "Dettes Fournisseurs" &&
             document.getElementById('E6').value == "300" &&
             document.getElementById('B7').value == "Banque" &&
-            document.getElementById('C7').value == "180" &&
+            document.getElementById('C7').value == "0" &&
             document.getElementById('D7').value == "Découvert Bancaire" &&
-            document.getElementById('E7').value == "0" &&
+            document.getElementById('E7').value == "180" &&
             document.getElementById('B8').value == "" &&
             document.getElementById('C8').value == "" &&
             document.getElementById('D8').value == "" &&
             document.getElementById('E8').value == "" &&
             document.getElementById('B9').value == "Total" &&
-            document.getElementById('C9').value == "1930" &&
+            document.getElementById('C9').value == "1750" &&
             document.getElementById('D9').value == "" &&
-            document.getElementById('E9').value == "1930"
+            document.getElementById('E9').value == "1750"
         ){
             $('#C7').css('background', 'lightgreen');
             $('#E7').css('background', 'lightgreen');
+            $('#E2').css("background", "lightgreen");
+            $('#E3').css("background", "lightgreen");
             document.querySelectorAll('input').forEach((inp) => {
                 inp.setAttribute('disabled', 'disabled')
             })
@@ -227,7 +230,9 @@
                 document.getElementById(""+lettre[colonne]+ligne+"").value = "";
             }
         }
-        document.getElementById("G3").value = "Aide: Ceci est un relevé bancaire fraudé";
+        document.getElementById("G3").value = "Aide: Ceci est un relevé bancaire fraudé, corrigez le...";
+        document.getElementById("G4").value = "Aide: Le BDE a une petite mémoire il note tout dans son bloc note...";
+
         $('#G3').css('font-weight', 'bold')
         init()
     })
