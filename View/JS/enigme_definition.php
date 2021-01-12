@@ -1,10 +1,26 @@
 <script type="text/javascript">
+
+/*##########
+###	Initialisation des variables
+######*/
+
+/*##########
+###	Section de récupération des tableaux des définitions, des solutions et de la solution,
+###	Randomiser par les fonctions se trouvant dans le fichier definitions.php
+######*/
 var def = <?= json_encode($rand_defs) ?>;
 var rep = <?= json_encode($rand_reps) ?>;
 var sol = <?= json_encode($solRep) ?>;
 var cadenas_open = false;
 cadenas_open = <?= $_SESSION['user_connected']->getAttr('role') == 'admin' ? 'true' : 'false' ?>;
 var alpha = ['a', 'b', 'c', 'd'];
+
+
+/*##########
+###	Boucle pour ajouter les balises des définitions et des réponses dans leur balise dédiée
+### Avec id contenant le numéro de la bonne réponse, la lettre d'alphabet et la définition pour les définitions
+### Exemple : <p id="d_0" al="a"><span class="alpha"><span class=""
+######*/
 
 for(var i = 0; i<def.length; i++){
 	$('#defs').append('<p id="d_'+sol[def[i]]+'" al="'+alpha[i]+'" ><span class="alpha">'+alpha[i].toUpperCase()+'</span>|     '+def[i]+'</p>')

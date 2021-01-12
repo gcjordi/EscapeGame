@@ -21,7 +21,7 @@ position: fixed;
 ">
     </div>
 
-    <img class="show_objet" objet="affiche_releve" src="View/IMG/poubelle2.png" style="position: fixed;
+    <img class="show_objet" objet="affiche_releve" id="mini_affiche_releve" src="View/IMG/poubelle2.png" style="position: fixed;
     height: 17vh;
     width: 13vh;
     top: 60vh;

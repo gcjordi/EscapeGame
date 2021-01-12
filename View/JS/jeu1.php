@@ -12,40 +12,82 @@
         inventaire = new Inventaire(5, div);
         inventaire.affiche()
     }
+    function allowDropPoubelle(event){
+        event.preventDefault();
+         $("#poubelle").attr('src', 'View/IMG/poubelle_ouverte.png')
+    }
+    
 
+    
     inventaire.div.ondrop = function(event){
-        
+        //Récupération du slot où l'utilisateur veut enregistrer l'objet
         var slot = $("#"+event.target.id).attr('slot')
         droppingInv(slot, event)
+    }
+
+    document.getElementById('affiche_coffre').ondrop = function(event){
+        var item = event.dataTransfer.getData('text')
+        if(item == "afficheClef"){
+            inventaire.deleteItem(inventaire.getItem(item));
+            inventaire.affiche()
+            openCoffre() 
+        }
+         
+    }
+
+    document.getElementById('poubelle').ondrop = function(event){
+        var item = event.dataTransfer.getData('text')
+        item = inventaire.getItem(item)
+        if(item != null){
+            var confirmDelete = confirm("Etes vous sur de vouloir supprimer '"+item.nom+"' ? Cette action est irréversible !")
+            if(confirmDelete){
+                inventaire.deleteItem(item);
+                inventaire.affiche()
+            }
+        }
+        $("#poubelle").attr('src', 'View/IMG/poubelle_ferme.png')
+    }
+
+    function openCoffre(){
+        $('#mini_bout_papier').css('display', 'block')
     }
 
 
     function droppingInv(actualSlot, event){
         var slot = actualSlot;
         var o = event.dataTransfer.getData('text')
+        
+        objet = inventaire.getItem(o)
+        if(!inventaire.estPlein()){
+            if(objet == null){
+              
+                var json = JSON.parse($("#"+o).attr('object'))
+                objet = new Objet(json.id, json.nom, json.img, json.open)
 
-        var oldObjet = inventaire.getItemBySlot(slot);
+                $("#"+objet.open).fadeOut()
+                if(json.remove == "mini_affiche_releve"){
+                    $("#"+json.remove).attr('objet', '')
 
-        var objet = inventaire.getItem(o)
-        if(objet == null){
-            var json = JSON.parse($("#"+o).attr('objet'))
-            objet = new Objet(json.id, json.nom, json.img)
+                }else{
+                    $("#"+json.remove).remove()
+                    if(json.remove == "mini_bout_papier")
+                        $("#affiche_coffre").fadeOut()
+                }
+                
+                $('.close_objet').css('display', 'none')
+                if(slot >= 0 && inventaire.inventaire["slot"+slot] == null){
+                    inventaire.addItem(slot, objet)
+                }else{
+                    inventaire.saveItem(objet)
+                }
 
-            $("#"+objet.id).remove()
-
-            if(slot >= 0){
-                inventaire.addItem(slot, objet)
+                
             }else{
-                inventaire.saveItem(objet)
+                inventaire.deplaceItem(slot, objet)
             }
-
-            
-        }else{
-            inventaire.deplaceItem(slot, objet)
+              inventaire.affiche();
         }
-
-
-        inventaire.affiche();
+      
 
     }
 
@@ -61,13 +103,23 @@
         $('#container').children('#'+$(this)[0]['id']).css('display', 'flex')
     })
 
+
+
     /*
     Effectue le code lors d'un click sur une balise avec la classe "show_objet"
     */
 
+
+
     $('.show_objet').on('click', function(e){ 
-        if ($(this).attr("class")=="show_objet") {
+        if ($(this).attr("class")=="show_objet" ) {
+
             objet_ouvert = $(this).attr('objet'); //Recupère l'objet donner en attribut dans la balise
+
+            if(objet_ouvert == "puzzle" && puzzlefini){
+                objet_ouvert = "puzzlefini"
+            }
+
             $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
             $('.close_objet').css('display', 'flex')
         }

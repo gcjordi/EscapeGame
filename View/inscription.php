@@ -22,7 +22,7 @@
         <div class="groupeCGU">
             <input type="checkbox" class="checkbox" id="checkbox" required />
             <label for="checkbox"></label>
-            <p class="cgu">En m'inscrivant, j'accepte les <a href="/cgv" class="rouge">CGV</a> et les <a href="/cgu" class="rouge">CGU</a>, notamment l'utilisation de cookies.</p>
+            <p class="cgu">En m'inscrivant, j'accepte les <a href="/cgu.html" class="rouge">CGU</a>, notamment l'utilisation de cookies.</p>
         </div>
 
          <input type="submit" name="inscrire" class="boutton" value="S'inscrire">

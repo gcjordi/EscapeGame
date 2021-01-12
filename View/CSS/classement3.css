@@ -1,0 +1,39 @@
+#container_classement {
+    width: 100%;
+    position: relative;
+}
+
+
+.ligne{
+    margin:0;
+    text-align: center;
+    color: white
+}
+
+
+
+.ligne:nth-child(even){
+   background-color: #cecece;
+   color : black;
+}
+.head{
+    background-color: #fff;
+    padding: 7px;
+}
+
+.ligne.you{
+    font-weight: bold;
+    background-color: #ff5660;
+    color: white;
+}
+
+.ligne.noClassement{
+    background-color: transparent;
+    text-align: center;
+    color: white
+}
+
+.ligne.noClassement a{
+    text-decoration: underline;
+    color: #ff5660
+}
