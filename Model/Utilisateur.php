@@ -9,6 +9,8 @@ class Utilisateur
 	private $id;
 	private $identifiant;
 	private $role;
+	private $temps;
+	private $tentative;
 	
 	function __construct($data = NULL)
 	{
@@ -23,6 +25,9 @@ class Utilisateur
 		return $this->$attr;
 	}
 
+	public function setAttr($attr, $value){
+		$this->$attr = $value;
+	}
 
 	public static function saveUtilisateur($identifiant, $crypt_mdp){
 		try{
@@ -60,7 +65,7 @@ class Utilisateur
 
 	public static function getUserByIdent($identifiant){
 		try{
-			$q = Model::$pdo->prepare('SELECT id, identifiant, role FROM casse_utilisateur WHERE identifiant=:ident');
+			$q = Model::$pdo->prepare('SELECT id, identifiant, role, temps, tentative FROM casse_utilisateur LEFT JOIN casse_classement ON id=id_user WHERE identifiant=:ident');
 			$q->execute([
 				':ident' => $identifiant
 			]);

@@ -14,7 +14,7 @@
     }
 
     inventaire.div.ondrop = function(event){
-        
+        //Récupération du slot où l'utilisateur veut enregistrer l'objet
         var slot = $("#"+event.target.id).attr('slot')
         droppingInv(slot, event)
     }
@@ -37,8 +37,6 @@
         var slot = actualSlot;
         var o = event.dataTransfer.getData('text')
         
-        var oldObjet = inventaire.getItemBySlot(slot);
-
         var objet = inventaire.getItem(o)
         if(objet == null){
           
