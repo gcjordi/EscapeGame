@@ -36,13 +36,14 @@
     }
 
     document.getElementById('poubelle').ondrop = function(event){
-        var confirmDelete = confirm("Etes vous sur de vouloir supprimer cet objet ? Cette action est irréversible !")
         var item = event.dataTransfer.getData('text')
         item = inventaire.getItem(item)
-        if(confirmDelete &&  item != null){
-            
-            inventaire.deleteItem(item);
-            inventaire.affiche()
+        if(item != null){
+            var confirmDelete = confirm("Etes vous sur de vouloir supprimer cet objet ? Cette action est irréversible !")
+            if(confirmDelete){
+                inventaire.deleteItem(item);
+                inventaire.affiche()
+            }
         }
         $("#poubelle").attr('src', 'View/IMG/poubelle_ferme.png')
     }
