@@ -7,7 +7,8 @@ $CSS = [
         'View/CSS/styles8.css',
         'View/CSS/definitions4.css',
         'View/CSS/stylefin1.css',
-        'View/CSS/chargement1.css'
+        'View/CSS/chargement1.css',
+        'View/CSS/inventaire.css'
 ];
 $JS = [
 	'View/JS/enigme_definition.php',
@@ -51,13 +52,9 @@ require 'View/view_chargement.php';
     endforeach; ?>
     <div class="close_objet" style="position: fixed; height: 100vh; width: 100vw; top:0; left:0; display: none;"></div>
 
-    <div id="affichageInventaire" style="display: flex;
-    flex-direction: column;
-    z-index: 50;
-    position: fixed;
-    top: 1vh;
-    right: 1vw;
-"></div>
+    <img src="View/IMG/poubelle_ferme.png" id="poubelle" ondragover='allowDropPoubelle(event)'></div>
+    <div id="affichageInventaire"></div>
+
     <div style="position: fixed; top: 1vh; left: 15vw; z-index: 50; flex-direction: row; display: flex">
         <a href="index.php" style="color: black; background: white; font-weight: bold; padding: 2vh; border-radius: 2vh">
             Quitter le jeu
@@ -66,6 +63,8 @@ require 'View/view_chargement.php';
             00:00
         </div>
     </div>
+
+
 
 
 
@@ -163,7 +162,7 @@ require 'View/view_chargement.php';
     function initChargement(){
          
 
-         chargement(0);
+         chargement(100);
          textChargement(1)
          phraseChargement()
     }

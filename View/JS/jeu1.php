@@ -12,7 +12,13 @@
         inventaire = new Inventaire(5, div);
         inventaire.affiche()
     }
+    function allowDropPoubelle(event){
+        event.preventDefault();
+         $("#poubelle").attr('src', 'View/IMG/poubelle_ouverte.png')
+    }
+    
 
+    
     inventaire.div.ondrop = function(event){
         //Récupération du slot où l'utilisateur veut enregistrer l'objet
         var slot = $("#"+event.target.id).attr('slot')
@@ -21,11 +27,24 @@
 
     document.getElementById('affiche_coffre').ondrop = function(event){
         var item = event.dataTransfer.getData('text')
-        if(item == "affiche_clef"){
+        if(item == "afficheClef"){
             inventaire.deleteItem(inventaire.getItem(item));
             inventaire.affiche()
             openCoffre() 
         }
+         
+    }
+
+    document.getElementById('poubelle').ondrop = function(event){
+        var confirmDelete = confirm("Etes vous sur de vouloir supprimer cet objet ? Cette action est irréversible !")
+        var item = event.dataTransfer.getData('text')
+        item = inventaire.getItem(item)
+        if(confirmDelete &&  item != null){
+            
+            inventaire.deleteItem(item);
+            inventaire.affiche()
+        }
+        $("#poubelle").attr('src', 'View/IMG/poubelle_ferme.png')
     }
 
     function openCoffre(){
@@ -37,36 +56,37 @@
         var slot = actualSlot;
         var o = event.dataTransfer.getData('text')
         
-        var objet = inventaire.getItem(o)
-        if(objet == null){
-          
-            var json = JSON.parse($("#"+o).attr('object'))
-            objet = new Objet(json.id, json.nom, json.img, json.open)
+        objet = inventaire.getItem(o)
+        if(!inventaire.estPlein()){
+            if(objet == null){
+              
+                var json = JSON.parse($("#"+o).attr('object'))
+                objet = new Objet(json.id, json.nom, json.img, json.open)
 
-            $("#"+objet.open).fadeOut()
-            if(json.remove == "mini_affiche_releve"){
-                $("#"+json.remove).attr('objet', '')
+                $("#"+objet.open).fadeOut()
+                if(json.remove == "mini_affiche_releve"){
+                    $("#"+json.remove).attr('objet', '')
 
+                }else{
+                    $("#"+json.remove).remove()
+                    if(json.remove == "mini_bout_papier")
+                        $("#affiche_coffre").fadeOut()
+                }
+                
+                $('.close_objet').css('display', 'none')
+                if(slot >= 0 && inventaire.inventaire["slot"+slot] == null){
+                    inventaire.addItem(slot, objet)
+                }else{
+                    inventaire.saveItem(objet)
+                }
+
+                
             }else{
-                $("#"+json.remove).remove()
-                if(json.remove == "mini_bout_papier")
-                    $("#affiche_coffre").fadeOut()
+                inventaire.deplaceItem(slot, objet)
             }
-            
-            $('.close_objet').css('display', 'none')
-            if(slot >= 0){
-                inventaire.addItem(slot, objet)
-            }else{
-                inventaire.saveItem(objet)
-            }
-
-            
-        }else{
-            inventaire.deplaceItem(slot, objet)
+              inventaire.affiche();
         }
-
-
-        inventaire.affiche();
+      
 
     }
 
