@@ -14,7 +14,7 @@ N'attendez pas et plongez dans l'univers de la comptabilté du BDE pour vérifie
 <div class="container">
     <h5 class="titre">LE PROJET</h1>
     <p class="textegris">Ce projet a pour objectif de réaliser un escape game virtuel sur le thème du management et plus particulièrement de la comptabilité.</p>
-    <p class="textegris"> Réalisé par Santiago MARTINEZ, Adrien SEGURA, Samuel ROBINET, William DONNETTE et Sous la direction de Antoine CHOLLET </p>
+    <p class="textegris">Réalisé par Santiago MARTINEZ, Adrien SEGURA, Samuel ROBINET, William DONNETTE et sous la direction de Antoine CHOLLET </p>
     <div class="boxbas">
         <div class="barlogo"></div>
         <div class="masque"></div>
