@@ -234,6 +234,16 @@
             }
             else {
                 alert("Wopopop... Ne va pas trop vite... Tu ne crois quand même pas t'en sortir aussi rapidement ;)")
+                $.ajax({
+                        url: 'View/AJAX/time.php',
+                        data: {'time' : cpt},
+                        type: 'post',
+                        success: function () {
+                            document.location.href = "jeu1.php"
+                            alert('Toujours réviser la comptabilité')
+                        }
+                    }
+                )
             }
 
         }
