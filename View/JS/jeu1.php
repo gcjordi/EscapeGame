@@ -295,6 +295,9 @@
     var lettre = 0;
     var scenario = document.getElementById('scenario1');
     var animationfini = false;
+    var audio = new Audio('View/sonclavier.mp3');
+    var music = new Audio('View/son2.mp3');
+
 
     function scenarioDebut() {
         if(lettre!=phrase.length){
@@ -306,6 +309,8 @@
         }
         else {
             animationfini = true;
+            audio.pause();
+
         }
     }
 
@@ -314,6 +319,8 @@
             $(this).fadeOut()
             $('#couloir').css('display', 'flex')
             attente()
+            music.loop = true;
+            music.play();
         }
     })
 </script>

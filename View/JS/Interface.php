@@ -110,7 +110,8 @@
             $('#chargement').fadeOut('slow')
             setTimeout(() => {
                 $('#chargement').remove()
-                scenarioDebut()
+                scenarioDebut();
+                audio.play();
             }, 1000)
 
         }
