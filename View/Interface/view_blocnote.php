@@ -1,4 +1,4 @@
-<div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 10000; padding: 3vh; transition: width 300ms, height 300ms">
+<div id="container_blocnote" class="box" style="position: fixed; bottom: 5vh; right: 5vw; width: 6vh; height: 6vh; border-radius: 6vh; background: white; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 9999; padding: 3vh; transition: width 300ms, height 300ms">
     <div id="blocnote" style="display: none; width: 20vw; height: 20vh">
         <p id="titre_BN" >Bloc-notes</p>
         <textarea style="height: 19vh; width: 20vw;"></textarea>
