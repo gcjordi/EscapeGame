@@ -233,16 +233,7 @@
                 )
             }
             else {
-                $.ajax({
-                        url: 'View/AJAX/time.php',
-                        data: {'time' : cpt},
-                        type: 'post',
-                        success: function () {
-                            document.location.href = "jeu1.php"
-                            alert("Wopopop... Ne va pas trop vite... Tu ne crois quand même pas t'en sortir aussi rapidement ;)")
-                        }
-                    }
-                )
+                alert("Wopopop... Ne va pas trop vite... Tu ne crois quand même pas t'en sortir aussi rapidement ;)")
             }
 
         }

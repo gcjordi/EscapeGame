@@ -207,7 +207,7 @@
             $('#E7').css('background', 'lightgreen');
             $('#E2').css("background", "lightgreen");
             $('#E3').css("background", "lightgreen");
-            document.querySelectorAll('input').forEach((inp) => {
+            document.querySelectorAll('#ordinateur>input').forEach((inp) => {
                 inp.setAttribute('disabled', 'disabled')
             })
             excelfini = true;
