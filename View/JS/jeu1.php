@@ -222,7 +222,7 @@
             if(excelfini){
                 $.ajax({
                         url: 'View/AJAX/fin.php',
-                        data: {'score' : cpt},
+                        data: {'score' : cpt-1},
                         type: 'post',
                         success: function () {
                             
