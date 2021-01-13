@@ -58,7 +58,7 @@ function convertSecondToMinute($second){
 <?php else : ?>
     <?php foreach($classement as $user): ?>
         <tr class="ligne <?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? 'you' : ''?>">
-            <td><?= $pos ?></td>
+            <td><span><?= $pos==1 ? "<img id='couronne' src='View/IMG/couronne.png'>" : "" ?><?= $pos ?></span></td>
             <td><?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? htmlspecialchars($user->getAttr("identifiant"))." (vous)" :htmlspecialchars($user->getAttr("identifiant")) ?></td>
             <td><?= convertSecondToMinute(htmlspecialchars($user->getAttr("temps"))) ?></td>
             <td><?= htmlspecialchars($user->getAttr("tentative")) ?></td>
@@ -68,3 +68,4 @@ function convertSecondToMinute($second){
 <?php endif;?>
     </tbody>
 </table>
+<!-- <a href='https://fr.pngtree.com/so/clipart-couronne'>clipart couronne png de fr.pngtree.com</a> -->
