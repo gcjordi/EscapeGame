@@ -14,7 +14,7 @@ $JS = [
 ];
 
 $LIBRAIRIES = [
-    'js/jquery-3.5.1.min.js',
+    'Librairies/jquery-3.5.1.min.js',
 ];
 
 require 'html_start.php';
