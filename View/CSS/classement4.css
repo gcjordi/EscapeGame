@@ -7,7 +7,8 @@
 .ligne{
     margin:0;
     text-align: center;
-    color: white
+    color: white;
+    height: fit-content;
 }
 
 
@@ -36,4 +37,15 @@
 .ligne.noClassement a{
     text-decoration: underline;
     color: #ff5660
+}
+
+tr:first-child > td:first-child{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#couronne > img{
+    width: 40px;
 }

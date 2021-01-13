@@ -6,11 +6,10 @@ $TITLE = "Classement";
 $CSS = [
     'View/CSS/header2.css',
     'View/CSS/styles8.css',
-    'View/CSS/classement3.css',
+    'View/CSS/classement4.css',
 ];
 
 $JS = [
-    'View/JS/classement.php',
 ];
 
 $LIBRAIRIES = [
