@@ -24,7 +24,7 @@
         		<?php foreach($tentatives as $t) : ?>
         			<tr>
         				<td><?= date("d/m/Y H:i:s", strtotime($t->getAttr('date')))?></td>
-        				<td><?= htmlspecialchars($t->getAttr('temps'))?></td>
+        				<td><?= convertSecondToMinute(htmlspecialchars($t->getAttr('temps')))?></td>
         			</tr>
         		<?php endforeach; ?>
         	</tbody>

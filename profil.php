@@ -36,23 +36,6 @@ $tentatives = Classement::getAllTentatives($_SESSION['user_connected']->getAttr(
 
 
 
-function convertSecondToMinute($second){
-    if($second > 59){
-        $minute = intval($second/60);
-        $seconde = intval($second%60);
-    }else{
-        $minute = 0;
-        $seconde = intval($second);
-    }
-    if($minute < 10)
-        $minute = "0".$minute;
-    
-
-    if($seconde < 10)
-        $seconde = "0".$seconde;
-    
-    return $minute." : ".$seconde;
-}
 
 ?>
 <?php

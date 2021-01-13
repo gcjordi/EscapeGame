@@ -5,25 +5,7 @@ require_once 'Model/Classement.php';
 $classement = Classement::getClassement();
 $pos = 1;
 
-
-
-function convertSecondToMinute($second){
-    if($second > 59){
-        $minute = intval($second/60);
-        $seconde = intval($second%60);
-    }else{
-        $minute = 0;
-        $seconde = $second;
-    }
-    if($minute < 10)
-        $minute = "0".$minute;
-    
-
-    if($seconde < 10)
-        $seconde = "0".$seconde;
-    
-    return $minute." : ".$seconde;
-}   
+ 
 ?>
 
 
