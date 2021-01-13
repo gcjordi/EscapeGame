@@ -1,4 +1,4 @@
-<div id="couloir" style="background: red; height: 100vh; width: 100vw; display: none">
+<div id="couloir" class="scene">
     <img src="View/IMG/couloir.png" class="fond">
     <div class="acces" id="porteBDE" style="    height: 64vh;
     z-index: 2;

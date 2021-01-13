@@ -1,6 +1,6 @@
-<div id="bureauBDE" style="background: #a7a192; height: 100vh; width: 100vw; display: none">
+<div id="bureauBDE" class="scene">
     <img src="View/IMG/bureauBDE.jpg" class="fond">
-    <div class="acces" id="couloir" style="    position: fixed;
+    <div class="acces" id="couloir" style="position: fixed;
     z-index: 2;
     flex-direction: column;
     bottom: 1vh;

@@ -1,7 +1,4 @@
-
-
-
-<div id="connection" style="background: white; height: 100vh; width: 100vw; display: none">
+<div id="connection" class="scene">
     <img class="fond" src="View/IMG/windows.jpg">
     <form method="post" style="z-index: 30; display: flex; flex-direction: column; justify-content: center; align-items: center">
         <p> Bureau du BDE </p>
@@ -25,23 +22,5 @@
         <img src="View/IMG/retour.png" style="width: 5vw">
         <p>Bureau du BDE</p>
     </div>
-
-    <script type="text/javascript"> 
-    var mdp_find = false;
-    $('#valider').on('click', function(e) {
-            e.preventDefault() 
-            var pass = "Banque512";
-            var vpass = document.getElementById('vpass').value;
-            if( pass != vpass ) {
-                erreur.innerHTML = "Non tout est une affaire de perte et de clef";
-                erreur.style.color = "#f00";
-            } else {
-                mdp_find = true;
-                $('#container').children('#connection').css('display', 'none');
-                $('#container').children('#bureauOrdi').css('display', 'block');
-            } 
-        } )
-    </script> 
-
 </div>
 
