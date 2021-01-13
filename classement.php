@@ -10,7 +10,6 @@ $CSS = [
 ];
 
 $JS = [
-    'View/JS/classement.php',
 ];
 
 $LIBRAIRIES = [
