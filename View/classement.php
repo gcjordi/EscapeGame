@@ -1,17 +1,3 @@
-<?php
-require_once 'Model/Classement.php';
-
-
-$classement = Classement::getClassement();
-$pos = 1;
-
- 
-?>
-
-
-
-
-
 <table id="container_classement">
     <thead>
         <tr>
@@ -41,7 +27,7 @@ $pos = 1;
     <?php foreach($classement as $user): ?>
         <tr class="ligne <?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? 'you' : ''?>">
             <td><?= $pos==1 ? "<span id='couronne'><img src='View/IMG/couronne.png'></span>" : "" ?><span><?= $pos ?></span></td>
-            <td><?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? htmlspecialchars($user->getAttr("identifiant"))." (vous)" :htmlspecialchars($user->getAttr("identifiant")) ?></td>
+            <td><a href="profil.php?ident=<?= rawurlencode($user->getAttr("identifiant")) ?>"><?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? htmlspecialchars($user->getAttr("identifiant"))." (vous)" :htmlspecialchars($user->getAttr("identifiant")) ?></a></td>
             <td><?= convertSecondToMinute(htmlspecialchars($user->getAttr("temps"))) ?></td>
             <td><?= htmlspecialchars($user->getAttr("tentative")) ?></td>
         </tr>
