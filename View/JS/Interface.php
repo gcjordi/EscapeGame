@@ -17,9 +17,9 @@
     
     
 
-    function afficherCpt(cpt) {
-        var minute = parseInt(cpt/60);
-        var seconde = cpt%60;
+    function afficherCpt(t) {
+        var minute = parseInt(t/60);
+        var seconde = t%60;
         var affichageMinute = "";
         var affichageSeconde = "";
         if(minute<10) {
@@ -40,7 +40,7 @@
         else {
             affichageSeconde = seconde
         }
-        cpt++;
+        cpt = t+1;
         document.getElementById('timer').innerHTML = ""+affichageMinute+":"+affichageSeconde+""
         setTimeout(() => afficherCpt(cpt), 1000);
         
