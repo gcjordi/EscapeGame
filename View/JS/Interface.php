@@ -40,8 +40,9 @@
         else {
             affichageSeconde = seconde
         }
+        cpt++;
         document.getElementById('timer').innerHTML = ""+affichageMinute+":"+affichageSeconde+""
-        setTimeout(() => afficherCpt(cpt+1), 1000);
+        setTimeout(() => afficherCpt(cpt), 1000);
         
     }
 
