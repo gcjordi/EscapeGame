@@ -4,7 +4,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -26,7 +26,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -41,7 +41,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -58,7 +58,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -74,7 +74,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 38%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -89,7 +89,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -105,7 +105,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 68%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -120,7 +120,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -136,7 +136,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -151,7 +151,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -167,7 +167,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -183,7 +183,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -199,7 +199,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;
@@ -215,7 +215,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 10;
+      z-index: 31;
       height: 90%;
       transform: translate(-50%, -50%);
       padding: 12px 30px;

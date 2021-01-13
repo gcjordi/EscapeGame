@@ -318,7 +318,7 @@
         if(animationfini){
             $(this).fadeOut()
             $('#couloir').css('display', 'flex')
-            attente()
+            afficherCpt(cpt)
             music.loop = true;
             music.play();
         }

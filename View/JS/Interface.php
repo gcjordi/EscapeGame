@@ -14,21 +14,10 @@
         ?>;
     <?php $_SESSION['timer']=0; ?>
     var finiChargement = false;
-    function attente() {
+    
+    
 
-        setTimeout(function () {
-            compte()
-        }, 1000);
-    }
-
-    function compte() {
-        cpt++;
-        afficherCpt()
-        attente()
-    }
-    afficherCpt()
-
-    function afficherCpt() {
+    function afficherCpt(cpt) {
         var minute = parseInt(cpt/60);
         var seconde = cpt%60;
         var affichageMinute = "";
@@ -52,6 +41,8 @@
             affichageSeconde = seconde
         }
         document.getElementById('timer').innerHTML = ""+affichageMinute+":"+affichageSeconde+""
+        setTimeout(() => afficherCpt(cpt+1), 1000);
+        
     }
 
     initChargement()
