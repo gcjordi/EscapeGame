@@ -26,6 +26,7 @@ $classement = Classement::getClassement();
 $pos = 1;
 
 
+
 require 'View/header.php';
 require 'View/classement.php';
 require 'html_end.php';

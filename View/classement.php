@@ -8,7 +8,7 @@
                 Pseudo
             </th>
             <th class="head">
-                Meilleur temps
+                Dernier temps
             </th>
             <th class="head">
                 Tentatives
@@ -28,7 +28,7 @@
         <tr class="ligne <?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? 'you' : ''?>">
             <td><?= $pos==1 ? "<span id='couronne'><img src='View/IMG/couronne.png'></span>" : "" ?><span><?= $pos ?></span></td>
             <td><a href="profil.php?ident=<?= rawurlencode($user->getAttr("identifiant")) ?>"><?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? htmlspecialchars($user->getAttr("identifiant"))." (vous)" :htmlspecialchars($user->getAttr("identifiant")) ?></a></td>
-            <td><?= convertSecondToMinute(htmlspecialchars(Classement::getBestTentative($user->getAttr('id')))) ?></td>
+            <td><?= convertSecondToMinute(htmlspecialchars($user->getAttr("temps"))) ?></td>
             <td><?= htmlspecialchars($user->getAttr("tentative")) ?></td>
         </tr>
     <?php $pos++; 
