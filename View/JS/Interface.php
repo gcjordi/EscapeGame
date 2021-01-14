@@ -14,23 +14,12 @@
         ?>;
     <?php $_SESSION['timer']=0; ?>
     var finiChargement = false;
-    function attente() {
+    
+    
 
-        setTimeout(function () {
-            compte()
-        }, 1000);
-    }
-
-    function compte() {
-        cpt++;
-        afficherCpt()
-        attente()
-    }
-    afficherCpt()
-
-    function afficherCpt() {
-        var minute = parseInt(cpt/60);
-        var seconde = cpt%60;
+    function afficherCpt(t) {
+        var minute = parseInt(t/60);
+        var seconde = t%60;
         var affichageMinute = "";
         var affichageSeconde = "";
         if(minute<10) {
@@ -51,7 +40,10 @@
         else {
             affichageSeconde = seconde
         }
+        cpt = t+1;
         document.getElementById('timer').innerHTML = ""+affichageMinute+":"+affichageSeconde+""
+        setTimeout(() => afficherCpt(cpt), 1000);
+        
     }
 
     initChargement()
@@ -121,10 +113,12 @@
 
     $('#affichageInventaire').on('click', function (e) {
         $('.itemInventaire').on('click', function (e) {
-            objet_ouvert = $(this).attr("objet");
-            console.log(objet_ouvert) //Recupère l'objet donner en attribut dans la balise
-            $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
-            $('.close_objet').css('display', 'flex')
+            if(objet_ouvert == ""){
+                objet_ouvert = $(this).attr("objet");
+                console.log(objet_ouvert) //Recupère l'objet donner en attribut dans la balise
+                $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
+                $('.close_objet').css('display', 'flex')
+            }
         })
     })
 

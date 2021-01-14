@@ -4,7 +4,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 31;
     background-color: transparent;
     
 ">
@@ -17,14 +17,14 @@
     transform: translate(0%, 0%);
     width: 100%;
     height: 231px;
-    z-index: 12;
+    z-index: 33;
     cursor: pointer;"></div>
 
     <div id="form_cadenas" style="    position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, 0%);
-    z-index: 11;
+    z-index: 32;
     background: transparent; 
     width: 297px;">
 

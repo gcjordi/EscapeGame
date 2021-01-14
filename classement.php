@@ -17,6 +17,15 @@ $LIBRAIRIES = [
 ];
 
 require 'html_start.php';
+
+
+require_once 'Model/Classement.php';
+
+
+$classement = Classement::getClassement();
+$pos = 1;
+
+
 require 'View/header.php';
 require 'View/classement.php';
 require 'html_end.php';

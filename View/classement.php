@@ -1,35 +1,3 @@
-<?php
-require_once 'Model/Classement.php';
-
-
-$classement = Classement::getClassement();
-$pos = 1;
-
-
-
-function convertSecondToMinute($second){
-    if($second > 59){
-        $minute = intval($second/60);
-        $seconde = intval($second%60);
-    }else{
-        $minute = 0;
-        $seconde = $second;
-    }
-    if($minute < 10)
-        $minute = "0".$minute;
-    
-
-    if($seconde < 10)
-        $seconde = "0".$seconde;
-    
-    return $minute." : ".$seconde;
-}   
-?>
-
-
-
-
-
 <table id="container_classement">
     <thead>
         <tr>
@@ -40,7 +8,7 @@ function convertSecondToMinute($second){
                 Pseudo
             </th>
             <th class="head">
-                Temps
+                Meilleur temps
             </th>
             <th class="head">
                 Tentatives
@@ -59,8 +27,8 @@ function convertSecondToMinute($second){
     <?php foreach($classement as $user): ?>
         <tr class="ligne <?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? 'you' : ''?>">
             <td><?= $pos==1 ? "<span id='couronne'><img src='View/IMG/couronne.png'></span>" : "" ?><span><?= $pos ?></span></td>
-            <td><?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? htmlspecialchars($user->getAttr("identifiant"))." (vous)" :htmlspecialchars($user->getAttr("identifiant")) ?></td>
-            <td><?= convertSecondToMinute(htmlspecialchars($user->getAttr("temps"))) ?></td>
+            <td><a href="profil.php?ident=<?= rawurlencode($user->getAttr("identifiant")) ?>"><?= isset($_SESSION['user_connected']) && $user->getAttr('id') == $_SESSION['user_connected']->getAttr('id') ? htmlspecialchars($user->getAttr("identifiant"))." (vous)" :htmlspecialchars($user->getAttr("identifiant")) ?></a></td>
+            <td><?= convertSecondToMinute(htmlspecialchars(Classement::getBestTentative($user->getAttr('id')))) ?></td>
             <td><?= htmlspecialchars($user->getAttr("tentative")) ?></td>
         </tr>
     <?php $pos++; 
