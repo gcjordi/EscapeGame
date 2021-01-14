@@ -1,15 +1,6 @@
 
 <div id="affiche_bde" style="display: none;">
-  <div id="aff_definitions" style="
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 31;
-      height: 90%;
-      transform: translate(-50%, -50%);
-      padding: 12px 30px;
-      width: 60vh;
-      color:white;">
+  <div id="aff_definitions">
       <img alt="img" style="width: 60vh; position: absolute;" src="View/IMG/Affiche_BDE_INFO_vide.jpg" id="affiche1" object='<?= json_encode(['id' => 'afficheBde', 'nom' => 'Affiche du BDE', 'img' => "View/IMG/Votre_BDE_INFO_2.jpg", "open" => "affiche_bde", "remove"=>"mini_affiche_bde"]) ?>' ondragstart="drag(event)">
       <div id="def_rep">
             <div id="defs" style="display: flex;
