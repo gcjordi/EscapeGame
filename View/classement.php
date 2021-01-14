@@ -8,7 +8,7 @@
                 Pseudo
             </th>
             <th class="head">
-                Temps
+                Dernier temps
             </th>
             <th class="head">
                 Tentatives
