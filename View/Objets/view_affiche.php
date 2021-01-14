@@ -13,9 +13,12 @@
       <img alt="img" style="width: 60vh; position: absolute;" src="View/IMG/Affiche_BDE_INFO_vide.jpg" id="affiche1" object='<?= json_encode(['id' => 'afficheBde', 'nom' => 'Affiche du BDE', 'img' => "View/IMG/Votre_BDE_INFO_2.jpg", "open" => "affiche_bde", "remove"=>"mini_affiche_bde"]) ?>' ondragstart="drag(event)">
       <div id="def_rep">
             <div id="defs" style="display: flex;
-    flex-direction: column;"></div>
+    flex-direction: column;max-height: 16vh;
+    font-size: 1.3vh;
+    max-width: 37vw;
+    margin-left: 1vw;"></div>
             <div id="reps" style="display: flex;
-    width: 100%;justify-content:space-between;"></div>
+    width: 100%;justify-content:space-between; max-width: 37vw"></div>
       </div>
 		
 </div>
