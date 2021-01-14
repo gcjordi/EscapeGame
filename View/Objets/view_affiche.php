@@ -20,9 +20,12 @@
     width: 90%;
     padding: 0 20px;">
             <div id="defs" style="display: flex;
-    flex-direction: column;"></div>
+    flex-direction: column;max-height: 16vh;
+    font-size: 1.3vh;
+    max-width: 37vw;
+    margin-left: 1vw;"></div>
             <div id="reps" style="display: flex;
-    width: 100%;justify-content:space-between;"></div>
+    width: 100%;justify-content:space-between; max-width: 37vw"></div>
       </div>
 		
 </div>
