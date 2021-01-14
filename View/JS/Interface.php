@@ -113,10 +113,12 @@
 
     $('#affichageInventaire').on('click', function (e) {
         $('.itemInventaire').on('click', function (e) {
-            objet_ouvert = $(this).attr("objet");
-            console.log(objet_ouvert) //Recupère l'objet donner en attribut dans la balise
-            $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
-            $('.close_objet').css('display', 'flex')
+            if(objet_ouvert == ""){
+                objet_ouvert = $(this).attr("objet");
+                console.log(objet_ouvert) //Recupère l'objet donner en attribut dans la balise
+                $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
+                $('.close_objet').css('display', 'flex')
+            }
         })
     })
 

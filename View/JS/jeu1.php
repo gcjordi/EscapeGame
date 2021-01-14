@@ -87,6 +87,7 @@
                 inventaire.deplaceItem(slot, objet)
             }
               inventaire.affiche();
+              objet_ouvert = ""
         }
       
 
@@ -110,20 +111,22 @@
 
 
     $('.show_objet').on('click', function(e){ 
-        if ($(this).attr("class")=="show_objet" ) {
+        if(objet_ouvert == ""){
+            if ($(this).attr("class")=="show_objet" ) {
 
-            objet_ouvert = $(this).attr('objet'); //Recupère l'objet donner en attribut dans la balise
+                objet_ouvert = $(this).attr('objet'); //Recupère l'objet donner en attribut dans la balise
 
-            if(objet_ouvert == "puzzle" && puzzlefini){
-                objet_ouvert = "puzzlefini"
+                if(objet_ouvert == "puzzle" && puzzlefini){
+                    objet_ouvert = "puzzlefini"
+                }
+
+                $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
+                $('.close_objet').css('display', 'flex')
             }
-
-            $('#'+objet_ouvert).css('display', 'flex') //Ouvre la balise avec l'id de l'objet récupérer
-            $('.close_objet').css('display', 'flex')
-        }
-        else if ($(this).attr("class")=="acces") {
-            $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
-            $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+            else if ($(this).attr("class")=="acces") {
+                $('#container').children('#'+$(this)[0]['parentElement']['id']).css('display', 'none')
+                $('#container').children('#'+$(this)[0]['id']).css('display', 'block')
+            }
         }
 
     })
