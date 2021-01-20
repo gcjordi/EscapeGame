@@ -84,6 +84,9 @@ tr:first-child > td:first-child{
     border-bottom-right-radius: 30px;
 }
 
+#one.you > td{
+    border-radius: 0;   
+}
 
 .ligne.profil.you:last-child > td{
     border-radius:0;
