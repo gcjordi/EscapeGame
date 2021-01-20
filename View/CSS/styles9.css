@@ -143,26 +143,6 @@ textarea{
     background-color: white;
 }
 
-.register {
-    position: relative;
-    display: block;
-    width: 120px;
-    height: 22px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 22px;
-    border-radius: 100px !important;
-    background-color: #FF5660;
-    color: #423e2f;
-    text-shadow: 0px 1px 0 rgba(247, 50, 86, 0.39);
-    font-weight: 600 !important;
-    font-size: 13px;
-    letter-spacing: 2.3px;
-    text-transform: uppercase;
-    transition: all .3s;
-    box-shadow: 0 2px 15px 0 rgba(243,210,68,0.4);
-    cursor: pointer;
-}
 
 .boxbas{
     position: relative;
@@ -215,5 +195,11 @@ a {
     font-size: 13px;
     letter-spacing: 2.3px;
     text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+    transition: padding 0.3s ease;
+}
 
+.register:hover{
+    padding: 10px;
 }

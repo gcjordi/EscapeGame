@@ -5,7 +5,7 @@ $TITLE = "Profil";
 
 $CSS = [
   'View/CSS/header2.css',
-	'View/CSS/styles8.css',
+	'View/CSS/styles9.css',
   'View/CSS/styles6.css',
   'View/CSS/inscription1.css',
   'View/CSS/classement7.css'
@@ -23,10 +23,11 @@ $LIBRAIRIES = [
 require 'html_start.php';
 require_once 'Model/Classement.php';
 
-if(!isset($_SESSION['user_connected']) && !(isset($_GET['ident']) && !empty($_GET['ident']))){
+
+
+if(!isset($_SESSION['user_connected'])){
     header("Location:connexion.php"); //ne pas mettre d'espace avant les ":"
-  }
-  
+}
 
 $user_profil = false;
 $isUserConnected = false;

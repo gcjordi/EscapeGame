@@ -4,7 +4,7 @@ $TITLE = "Le Casse de la Compta";
 
     $CSS = [
         'View/CSS/header2.css',
-        'View/CSS/styles8.css',
+        'View/CSS/styles9.css',
         'View/CSS/styles6.css',
         'View/CSS/projet1.css',
         'View/CSS/ordi.css'
