@@ -49,3 +49,42 @@ tr:first-child > td:first-child{
 #couronne > img{
     width: 40px;
 }
+
+.ligne.profil{
+    background-color: #21243a;
+    height: 30px;
+    align-items: center;
+}
+
+
+.ligne.profil:first-child{
+    line-height: 27px;
+}
+
+.ligne.profil:nth-child(even){
+   background-color: #cecece;
+   color : black;
+}
+
+.ligne.profil:last-child > .date{
+    border-bottom-left-radius: 30px;
+}
+
+#one > .date{
+     border-bottom-left-radius: 30px;
+     display: table-cell;
+     width: 70%;
+}
+
+.ligne.profil:last-child > .second{
+    border-bottom-right-radius: 30px;
+}
+
+#one > .second{
+    border-bottom-right-radius: 30px;
+}
+
+
+.ligne.profil.you:last-child > td{
+    border-radius:0;
+}

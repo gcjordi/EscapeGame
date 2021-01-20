@@ -70,6 +70,7 @@ $("#ouvrir_cadenas").on('click', function(e){
 		setTimeout(() => $('#cadenas').fadeOut("slow"), 500)
         $('#bureauBDE').toggleClass('show_objet')
         $('#bureauBDE').toggleClass('acces')
+        objet_ouvert = "";
 
     }else{
 		$('#img_cadenas').addClass('shake')

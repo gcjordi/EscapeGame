@@ -13,8 +13,8 @@
         <p>Meilleur temps : <span><?= convertSecondToMinute(Classement::getBestTentative($user_profil->getAttr('id'))) ?></span></p>
         <p>Moyenne des temps : <span><?= convertSecondToMinute(Classement::getMoyenneTentative($user_profil->getAttr('id'))) ?></span></p>
         <h4>Tous <?= $isUserConnected ? 'mes' : 'ses'?> temps : </h4>
-        <table>
-        	<thead>
+        <table style="width: 100%">
+        	<thead style="background-color: #ff5660">
         		<tr>
         			<th>Date</th>
         			<th>Temps</th>
@@ -22,9 +22,9 @@
         	</thead>
         	<tbody>
         		<?php foreach($tentatives as $t) : ?>
-        			<tr>
-        				<td><?= date("d/m/Y H:i:s", strtotime($t->getAttr('date')))?></td>
-        				<td><?= convertSecondToMinute(htmlspecialchars($t->getAttr('temps')))?></td>
+        			<tr <?= count($tentatives) == 1 ? 'id="one"' : ''?> class="ligne profil <?= $isUserConnected ? 'you' : '' ?> "> 
+        				<td class="date"><?= date("d/m/Y H:i:s", strtotime($t->getAttr('date')))?></td>
+        				<td class="second"><?= convertSecondToMinute(htmlspecialchars($t->getAttr('temps')))?></td>
         			</tr>
         		<?php endforeach; ?>
         	</tbody>

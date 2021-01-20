@@ -6,7 +6,7 @@ $TITLE = "Classement";
 $CSS = [
     'View/CSS/header2.css',
     'View/CSS/styles8.css',
-    'View/CSS/classement4.css',
+    'View/CSS/classement7.css',
 ];
 
 $JS = [

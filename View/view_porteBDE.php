@@ -16,6 +16,8 @@
          width: 18vw;
          height: 100%;
          z-index: 30;
+         cursor: pointer;
+         border:none;
         ">
 
     </div>

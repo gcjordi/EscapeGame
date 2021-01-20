@@ -8,6 +8,7 @@ $CSS = [
 	'View/CSS/styles8.css',
   'View/CSS/styles6.css',
   'View/CSS/inscription1.css',
+  'View/CSS/classement7.css'
 
 ];
 
@@ -38,6 +39,9 @@ if($user_profil == false){
 	$user_profil = $_SESSION['user_connected'];
 	$isUserConnected = true;
 }
+
+if($user_profil->getAttr('id') == $_SESSION['user_connected']->getAttr('id'))
+	$isUserConnected = true;
 
 $tentatives = Classement::getAllTentatives($user_profil->getAttr('id'));
 
